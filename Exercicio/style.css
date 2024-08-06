@@ -25,7 +25,7 @@ hr {
   height: 2px;
   background-color: #fff;
   width: 100%;
-  
+  margin-top: 25px;
 }
 
 h2 {
@@ -55,6 +55,9 @@ input[type="button"] {
     width: 8%;
     height: 50px;
     border-radius: 8px;
+    background: blue;
+    color: #fff;
+    border: none;
 }
 
 table {
@@ -64,6 +67,11 @@ table {
 th,
 td {
   border: 1px solid #fff;
-  padding: 8px;
+  padding: 20px;
   text-align: left;
+}
+
+th {
+    text-align: center;
+    padding: 5px;
 }
