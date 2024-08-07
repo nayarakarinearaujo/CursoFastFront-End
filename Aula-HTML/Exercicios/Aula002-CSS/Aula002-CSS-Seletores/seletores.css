@@ -1,0 +1,78 @@
+body {
+    margin: 20px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* Seletor de ID */
+#header {
+    background-color: gray;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Seletor de Classe */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Seletor de Atributo Presente */
+[type] {
+    border: 1px solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+/* Seletor de Atributo Igual */
+[type="text"] {
+    background-color: lightblue;
+}
+
+/* Seletor de Atributo Começa com */
+[href^="https"] {
+    color: green;
+}
+
+/* Seletor de Atributo Contém */
+[class*="box"] {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+/* Seletor de Estado :hover */
+a:hover {
+    color: red;
+}
+
+/* Seletor de Estado :focus */
+input:focus {
+    border: 2px solid blue;
+}
+
+/* Seletor de Estado :active */
+button:active {
+    background-color: lightgray;
+}
+
+/* Seletor de Filho */
+ul > li {
+    color: #333;
+    list-style-type: none;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-precedence {
+    background-color: #dddcdc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+}

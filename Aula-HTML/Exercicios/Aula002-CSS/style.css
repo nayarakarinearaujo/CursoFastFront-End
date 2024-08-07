@@ -26,6 +26,16 @@ pre {
     overflow-x: auto;
 }
 
+.container{
+background-color: #f1f1f1;
+padding: 15px;
+}
+
+.container h2 {
+    background-color: grey;
+    color: white;
+}
+
 code {
     font-family: 'Courier New', Courier, monospace;
     color: #d14;
