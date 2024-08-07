@@ -39,11 +39,17 @@ label {
 
 input[type="text"],
 input[type="number"] {
-border-radius: 8px;
+  width: 170px;
+  padding: 5px;
+  margin-left: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
 }
 
 .inputInteresse {
-    height: 35px;
+    height: 45px;
 }
 
 div .form {
@@ -51,13 +57,19 @@ div .form {
 }
 
 input[type="button"] {
-    margin-left: 10px;
-    width: 8%;
+    margin-left: 30px;
+    width: 12%;
     height: 50px;
-    border-radius: 8px;
-    background: blue;
+    border-radius: 6px;
+    background: #64c8f0;
     color: #fff;
     border: none;
+}
+
+input[type="button"]:hover {
+  background: #0db3f5;
+  color: #060606;
+ 
 }
 
 table {
