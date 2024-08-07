@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vantagens e Desvantagens do CSS Externo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Vantagens e Desvantagens do CSS Externo</h1>
+    <p>O CSS externo é geralmente preferido em desenvolvimento web por várias razões, principalmente relacionadas à manutenção, teremos uma estrutura mais limpa e serão menores, desempenho e boas práticas de codificação. Aqui estão algumas vantagens detalhadas do uso de CSS externo:</p>
+
+    <h2>Vantagens:</h2>
+    <ul>
+        <li><strong>Manutenção fácil:</strong> Com o CSS em arquivos separados, é mais fácil atualizar e manter os estilos de várias páginas a partir de um único arquivo CSS.</li>
+        <li><strong>Reutilização:</strong> Estilos definidos em arquivos CSS externos podem ser reutilizados em várias páginas, garantindo consistência no design e reduzindo a duplicação de código.</li>
+        <li><strong>Separação de preocupações:</strong> Mantém a estrutura (HTML) e a apresentação (CSS) separadas, seguindo as boas práticas de desenvolvimento web.</li>
+        <li><strong>Desempenho:</strong> Arquivos CSS externos são armazenados em cache pelo navegador, o que pode melhorar o desempenho do site ao reduzir o tempo de carregamento em visitas subsequentes.</li>
+        <li><strong>Escalabilidade:</strong> Em projetos grandes ou complexos, o CSS externo facilita a organização e a escalabilidade do código.</li>
+    </ul>
+
+    <h2>Desvantagens:</h2>
+    <ul>
+        <li><strong>Requisições adicionais:</strong> Requer requisições HTTP adicionais para carregar arquivos CSS, o que pode impactar o tempo de carregamento inicial da página.</li>
+        <li><strong>Dependência de arquivos externos:</strong> Se o arquivo CSS externo não estiver disponível ou não for carregado corretamente, a página pode aparecer sem estilos.</li>
+    </ul>
+
+    <h2>Resumo:</h2>
+    <p>O CSS externo é ideal para projetos maiores e complexos, pois facilita a manutenção, reutilização e organização dos estilos. Embora possa requerer requisições HTTP adicionais, os benefícios de desempenho e a separação de preocupações geralmente superam as desvantagens. Recomenda-se o uso de CSS externo para garantir uma melhor manutenção e escalabilidade em projetos de maior escala.</p>
+
+    <h2>Exemplo de CSS Externo:</h2>
+    <p>Este é um exemplo de como incluir um arquivo CSS externo e aplicá-lo a um documento HTML.</p>
+
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-BR&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;Exemplo de CSS Externo&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;p class=&quot;example&quot;&gt;Este é um parágrafo estilizado com CSS externo.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</body>
+</html>
