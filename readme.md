@@ -37,6 +37,6 @@
 
 ### Atividades Módulo 1 - HTML : Agenda
 
-- [Executar exercício 1](https://github.com/nayarakarinearaujo/CursoFastFront-End/tree/main/Aula001-HTML)
+- [Executar exercício 1](https://github.com/nayarakarinearaujo/CursoFastFront-End/Aulas/Fundamentos/Aula001-HTML/aula.html)
 - [Projeto Agenda](https://github.com/nayarakarinearaujo/CursoFastFront-End/tree/main/Aula001-HTML)
 
