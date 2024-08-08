@@ -83,7 +83,7 @@ header {
     min-height: 300px;
 }
 
-h1 {
+h1 .title-header {
     color: #9f0067;
     text-align: center;
 }
