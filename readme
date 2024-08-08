@@ -35,9 +35,8 @@
 - Testes automatizados unitários
 - Práticas
 
+### Atividades Módulo 1 - HTML : Agenda
 
-### Atividades Módulo 1 - 
-HTML : Agenda
-
-- [Executar exercicio 1](https://github.com/nayarakarinearaujo/CursoFastFront-End/tree/main/Aula001-HTML)
+- [Executar exercício 1](https://github.com/nayarakarinearaujo/CursoFastFront-End/tree/main/Aula001-HTML)
 - [Projeto Agenda](https://github.com/nayarakarinearaujo/CursoFastFront-End/tree/main/Aula001-HTML)
+
