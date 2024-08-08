@@ -50,8 +50,10 @@
             padding: 5px;
         }
 
-        img  {
+        img {
             width: 80%;
+            margin: 10px 0;
+            display: block;
         }
 
         .example {
@@ -77,7 +79,8 @@
         <h3>Contêiner Flexível e Itens Flexíveis:</h3>
         <ul>
             <li><strong>Contêiner Flexível:</strong> O elemento que possui a propriedade <code>display: flex;</code> ou
-                <code>display: inline-flex;</code> aplicada.</li>
+                <code>display: inline-flex;</code> aplicada.
+            </li>
             <li><strong>Itens Flexíveis:</strong> Os elementos filhos diretos do contêiner flexível.</li>
         </ul>
 
@@ -120,7 +123,7 @@
                     <li><code>space-around</code>: Distribui os itens com espaço igual ao redor de cada um.</li>
                     <li><code>space-evenly</code>: Distribui os itens com espaço igual entre e ao redor deles.</li>
 
-                    <img src="justifycontent.jpg" alt="">
+                    <img src="justifycontent.jpg" alt="" style="width: 45%;">
                 </ul>
             </li>
             <li><strong><code>align-items:</code></strong>
@@ -141,7 +144,7 @@
                     <li><code>space-around</code>: Distribui as linhas com espaço igual ao redor de cada uma.</li>
                     <li><code>stretch</code> (padrão): Estica as linhas para preencher o contêiner.</li>
 
-                    <img src="aligncontent.jpg" alt="">
+                    <img src="aligncontent.jpg" alt="" style="width: 45%;">
                 </ul>
             </li>
             <li><strong><code>align-items</code> vs <code>align-content</code>:</strong>
@@ -159,7 +162,8 @@
                     <li>Define o fator de crescimento de um item flexível.</li>
                     <li>Valor padrão é <code>0</code> (não cresce).</li>
                     <li>Exemplo: <code>flex-grow: 2;</code> faz o item crescer duas vezes mais que um item com
-                        <code>flex-grow: 1;</code>.</li>
+                        <code>flex-grow: 1;</code>.
+                    </li>
                 </ul>
             </li>
             <li><strong><code>flex-shrink:</code></strong>
@@ -187,9 +191,11 @@
             <li><strong><code>align-self:</code></strong>
                 <ul>
                     <li>Permite que um item ajuste seu alinhamento individualmente, sobrescrevendo
-                        <code>align-items</code>.</li>
+                        <code>align-items</code>.
+                    </li>
                     <li>Valores: <code>auto</code>, <code>flex-start</code>, <code>flex-end</code>, <code>center</code>,
-                        <code>baseline</code>, <code>stretch</code>.</li>
+                        <code>baseline</code>, <code>stretch</code>.
+                    </li>
                 </ul>
             </li>
         </ul>
