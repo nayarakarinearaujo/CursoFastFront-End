@@ -1,41 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meus Exercícios</title>
+    <title>Portfolio do Bootcamp Front-end</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a href=""></a></li>
-        </ul>
-    </nav>
     <header>
-        <h1>Seja bem vindo(a)</h1>
+        <h1>Portfolio do Bootcamp Front-end</h1>
     </header>
 
-    <main>
-        <section class="section-classroom">
-            <h2>Atividades das Aulas</h2>
-            <div>
-                <ul>
-                    <li><a href="Exercicios/Aula001-HTML/aula.html">Aula 001</a></li>
-                    <li></li>
-                </ul>
+    <nav>
+        <a href="#fundamentos">Fundamentos</a>
+        <a href="#webapi">Web API</a>
+        <a href="#react">React</a>
+    </nav>
+
+    <div class="container">
+        <section id="fundamentos" class="module">
+            <h2>Módulo 1 - Fundamentos de Front-end Web</h2>
+            <div class="project">
+                <h3>HTML</h3>
+                <p>Descrição e links para projetos feitos com HTML.</p>
+
+                <div class="container_activity">
+                    <h3>Atividades das Aulas</h3>
+                    <ul>
+                        <li><a href="Exercicios/Aula001-HTML/aula.html">Aula 001</a></li>
+                        <li></li>
+                    </ul>
+
+                    <h3>Meus Exercicios</h3>
+                    <ul>
+                        <li><a href="Exercicios/Aula001-HTML-Exercicio/exercicio.html">Aula 001: Exercicio</a></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project">
+                <h3>CSS</h3>
+                <p>Descrição e links para projetos feitos com CSS.</p>
+            </div>
+            <div class="project">
+                <h3>JavaScript/TypeScript/ES6 (DOM)</h3>
+                <p>Descrição e links para projetos feitos com JavaScript, TypeScript e ES6.</p>
+            </div>
+            <div class="project">
+                <h3>Práticas</h3>
+                <p>Descrição e links para práticas realizadas.</p>
             </div>
         </section>
 
-        <section class="section-exercise">
-            <h2>Meus Exercicios</h2>
-            <div>
-                <ul>
-                    <li><a href="Exercicios/Aula001-HTML-Exercicio/exercicio.html">Aula 001: Exercicio</a></li>
-                    <li></li>
-                </ul>
+        <section id="webapi" class="module">
+            <h2>Módulo 2 - Web API</h2>
+            <div class="project">
+                <h3>Conceitos de Web API</h3>
+                <p>Descrição e links para projetos sobre conceitos de API, HTTP, URL, requisições e respostas.</p>
+            </div>
+            <div class="project">
+                <h3>Prática com Postman</h3>
+                <p>Descrição e links para práticas realizadas com Postman.</p>
+            </div>
+            <div class="project">
+                <h3>JSON e Manipulação</h3>
+                <p>Descrição e links para projetos manipulando JSON.</p>
+            </div>
+            <div class="project">
+                <h3>Segurança</h3>
+                <p>Descrição e links para projetos relacionados à segurança, como HTTPS, autenticação, autorização e
+                    CORS.</p>
+            </div>
+            <div class="project">
+                <h3>Documentação e Mocks</h3>
+                <p>Descrição e links para a documentação e mocks criados durante o módulo.</p>
             </div>
         </section>
-    </main>
+
+        <section id="react" class="module">
+            <h2>Módulo 3 - React</h2>
+            <div class="project">
+                <h3>Introdução ao React</h3>
+                <p>Descrição e links para projetos introdutórios ao React.</p>
+            </div>
+            <div class="project">
+                <h3>Componentes e JSX</h3>
+                <p>Descrição e links para projetos envolvendo componentes e JSX.</p>
+            </div>
+            <div class="project">
+                <h3>Props e Estado</h3>
+                <p>Descrição e links para projetos usando props e estado.</p>
+            </div>
+            <div class="project">
+                <h3>Forms, Inputs e Hooks</h3>
+                <p>Descrição e links para projetos com formulários, inputs e hooks.</p>
+            </div>
+            <div class="project">
+                <h3>Next e Testes Automatizados</h3>
+                <p>Descrição e links para projetos usando Next e testes automatizados.</p>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>
