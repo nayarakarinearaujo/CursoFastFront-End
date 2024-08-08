@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação de Seletores CSS</title>
+    <link rel="stylesheet" href="../AulaCSS/cssGlobal.css">
+</head>
+
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio do Bootcamp Front-end</h1>
+    </header>
+
+    <nav>
+        <a href="../../../index.html">Inicio</a>
+        <a href="../../../fundamentos.html">Fundamentos</a>
+        <a href="../../../webapi.html">Web API</a>
+        <a href="../../../react.html">React</a>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <h1>Explicação de Seletores CSS</h1>
+            <div class="section">
+                <h2>1. Seletor de ID</h2>
+                <p><strong>Sintaxe:</strong> <code>#id</code></p>
+                <p><strong>Descrição:</strong> Seleciona um elemento específico com um id único. IDs devem ser
+                    exclusivos em
+                    uma página, ou seja, cada id deve ser usado apenas uma vez.</p>
+                <pre><code>&lt;div id="header"&gt;Cabeçalho&lt;/div&gt;</code></pre>
+                <pre><code>#header {
+            background-color: gray;
+            color: white;
+            }</code></pre>
+                <div id="header">Cabeçalho</div>
+            </div>
+            <div class="section">
+                <h2>2. Seletor de Classe</h2>
+                <p><strong>Sintaxe:</strong> <code>.classe</code></p>
+                <p><strong>Descrição:</strong> Seleciona todos os elementos com uma classe específica. Múltiplos
+                    elementos
+                    podem compartilhar a mesma classe.</p>
+                <pre><code>&lt;p class="highlight"&gt;Texto destacado&lt;/p&gt;
+            &lt;p class="highlight"&gt;Outro texto destacado&lt;/p&gt;</code></pre>
+                <pre><code>.highlight {
+            background-color: yellow;
+            font-weight: bold;
+            }</code></pre>
+                <p class="highlight">Texto destacado</p>
+                <p class="highlight">Outro texto destacado</p>
+            </div>
+            <div class="section">
+                <h2>3. Seletor de Atributo</h2>
+                <p><strong>Seletor de Atributo Presente:</strong></p>
+                <p><strong>Sintaxe:</strong> <code>[atributo]</code></p>
+                <p><strong>Descrição:</strong> Seleciona elementos que têm um atributo específico, independentemente do
+                    valor desse atributo.</p>
+                <pre><code>&lt;input type="text" placeholder="Nome"&gt;
+            &lt;input type="password" placeholder="Senha"&gt;</code></pre>
+                <pre><code>[type] {
+            border: 1px solid black;
+            }</code></pre>
+                <input type="text" placeholder="Nome">
+                <input type="password" placeholder="Senha">
+                <p><strong>Seletor de Atributo Igual:</strong></p>
+                <p><strong>Sintaxe:</strong> <code>[atributo="valor"]</code></p>
+                <p><strong>Descrição:</strong> Seleciona elementos cujo atributo tem um valor exato.</p>
+                <pre><code>&lt;input type="text" placeholder="Nome"&gt;
+            &lt;input type="password" placeholder="Senha"&gt;</code></pre>
+                <pre><code>[type="text"] {
+            background-color: lightblue;
+            }</code></pre>
+                <input type="text" placeholder="Nome">
+                <input type="password" placeholder="Senha">
+                <p><strong>Seletor de Atributo Começa com:</strong></p>
+                <p><strong>Sintaxe:</strong> <code>[atributo^="valor"]</code></p>
+                <p><strong>Descrição:</strong> Seleciona elementos cujo atributo começa com um valor específico.</p>
+                <pre><code>&lt;a href="https://example.com"&gt;Link 1&lt;/a&gt;
+            &lt;a href="http://example.com"&gt;Link 2&lt;/a&gt;</code></pre>
+                <pre><code>[href^="https"] {
+            color: green;
+            }</code></pre>
+                <a href="https://example.com">Link Seguro</a>
+                <a href="http://example.com">Link Não Seguro</a>
+                <p><strong>Seletor de Atributo Contém:</strong></p>
+                <p><strong>Sintaxe:</strong> <code>[atributo*="valor"]</code></p>
+                <p><strong>Descrição:</strong> Seleciona elementos cujo atributo contém um valor específico.</p>
+                <pre><code>&lt;div class="box-primary"&gt;Caixa Primária&lt;/div&gt;
+            &lt;div class="box-secondary"&gt;Caixa Secundária&lt;/div&gt;</code></pre>
+                <pre><code>[class*="box"] {
+            padding: 10px;
+            }</code></pre>
+                <div class="box-primary">Caixa Primária</div>
+                <div class="box-secondary">Caixa Secundária</div>
+            </div>
+            <div class="section">
+                <h2>4. Seletor de Estado</h2>
+                <p><strong>:hover:</strong></p>
+                <p><strong>Sintaxe:</strong> <code>elemento:hover</code></p>
+                <p><strong>Descrição:</strong> Aplica estilos quando o usuário passa o mouse sobre um elemento.</p>
+                <pre><code>&lt;a href="#"&gt;Link&lt;/a&gt;</code></pre>
+                <pre><code>a:hover {
+            color: red;
+            }</code></pre>
+                <a href="#">Passe o mouse aqui</a>
+                <p><strong>:focus:</strong></p>
+                <p><strong>Sintaxe:</strong> <code>elemento:focus</code></p>
+                <p><strong>Descrição:</strong> Aplica estilos ao elemento que tem o foco (por exemplo, um campo de
+                    formulário que está sendo editado).</p>
+                <pre><code>&lt;input type="text" placeholder="Digite algo"&gt;</code></pre>
+                <pre><code>input:focus {
+            border: 2px solid blue;
+            }</code></pre>
+                <input type="text" placeholder="Digite algo">
+                <p><strong>:active:</strong></p>
+                <p><strong>Sintaxe:</strong> <code>elemento:active</code></p>
+                <p><strong>Descrição:</strong> Aplica estilos quando o elemento está sendo ativado, como quando um botão
+                    é
+                    clicado.</p>
+                <pre><code>&lt;button&gt;Pressione-me&lt;/button&gt;</code></pre>
+                <pre><code>button:active {
+            background-color: lightgray;
+            }</code></pre>
+                <button>Pressione-me</button>
+            </div>
+            <div class="section">
+                <h2>5. Seletor de Filho</h2>
+                <p><strong>Sintaxe:</strong> <code>pai &gt; filho</code></p>
+                <p><strong>Descrição:</strong> Seleciona elementos que são filhos diretos de um elemento pai.</p>
+                <pre><code>&lt;ul&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+            &lt;li&gt;Item 3&lt;/li&gt;
+            &lt;/ul&gt;</code></pre>
+                <pre><code>ul > li {
+            color: green;
+            }</code></pre>
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+            <div class="section-precedence
+            ">
+                <h2>Resumo da Precedência:</h2>
+                <ul>
+                    <li>1° Estilo Inline</li>
+                    <li>2° IDs</li>
+                    <li>3° Classes, Atributos e Pseudo-classes</li>
+                    <li>4° Elementos e Pseudo-elementos</li>
+                </ul>
+            </div>
+            <div class="section">
+                <h2>Detalhes Adicionais:</h2>
+                <p><strong>Especificidade:</strong> A especificidade é um fator importante na precedência. Por exemplo,
+                    <code>#id</code> tem uma especificidade mais alta do que <code>.classe</code>, e
+                    <code>.classe</code>
+                    tem uma especificidade mais alta do que <code>elemento</code>.
+                </p>
+                <p><strong>Importância:</strong> O uso de <code>!important</code> pode aumentar a prioridade de uma
+                    regra,
+                    independentemente da sua posição na folha de estilos. No entanto, o uso excessivo de
+                    <code>!important</code> é desencorajado, pois pode tornar o CSS difícil de manter.
+                </p>
+                <strong>
+                    <p>Exemplo: <code>p { color: red !important; }</code></p>
+                </strong>
+                <p><strong>Ordem de Aparição:</strong> Quando dois seletores têm a mesma especificidade, o que aparece
+                    por
+                    último na folha de estilos será aplicado.</p>
+                <p>Entender e aplicar corretamente a ordem de precedência é fundamental para evitar conflitos e garantir
+                    que
+                    o estilo desejado seja aplicado aos elementos da sua página.</p>
+            </div>
+
+        </div>
+    </main>
+</body>
+
+</html>
+</body>
+
+</html>
