@@ -1,40 +1,66 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vantagens e Desvantagens do CSS Interno</title>
+    <title>Aula CSS - Interno</title>
     <style>
-    
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
         code {
             font-family: 'Courier New', Courier, monospace;
             color: #d14;
         }
     </style>
 </head>
+
 <body>
 
     <h1>Vantagens e Desvantagens do CSS Interno</h1>
 
     <h2>Vantagens:</h2>
     <ul>
-        <li><strong>Aplicação rápida e simples:</strong> Facilita a aplicação de estilos diretamente dentro do documento HTML sem a necessidade de criar e gerenciar um arquivo CSS separado.</li>
-        <li><strong>Sem requisições adicionais:</strong> Reduz o número de requisições HTTP, já que os estilos estão embutidos no documento HTML. Isso pode melhorar o tempo de carregamento inicial em pequenas páginas ou protótipos.</li>
-        <li><strong>Facilidade para prototipagem:</strong> Útil para protótipos rápidos ou testes onde você quer visualizar mudanças imediatas de estilo sem gerenciar arquivos externos.</li>
-        <li><strong>Especificidade:</strong> Pode ser útil quando você precisa de estilos específicos que se aplicam apenas a uma única página, sem afetar outras partes do site.</li>
+        <li><strong>Aplicação rápida e simples:</strong> Facilita a aplicação de estilos diretamente dentro do documento
+            HTML sem a necessidade de criar e gerenciar um arquivo CSS separado.</li>
+        <li><strong>Sem requisições adicionais:</strong> Reduz o número de requisições HTTP, já que os estilos estão
+            embutidos no documento HTML. Isso pode melhorar o tempo de carregamento inicial em pequenas páginas ou
+            protótipos.</li>
+        <li><strong>Facilidade para prototipagem:</strong> Útil para protótipos rápidos ou testes onde você quer
+            visualizar mudanças imediatas de estilo sem gerenciar arquivos externos.</li>
+        <li><strong>Especificidade:</strong> Pode ser útil quando você precisa de estilos específicos que se aplicam
+            apenas a uma única página, sem afetar outras partes do site.</li>
     </ul>
 
     <h2>Desvantagens:</h2>
     <ul>
-        <li><strong>Manutenção difícil:</strong> Para projetos maiores, ter estilos dentro de cada documento HTML pode se tornar confuso e difícil de gerenciar. Atualizar estilos repetidamente em várias páginas se torna uma tarefa tediosa e propensa a erros.</li>
-        <li><strong>Reutilização limitada:</strong> Estilos definidos internamente não podem ser reutilizados facilmente em diferentes páginas, o que pode levar à duplicação de código e dificultar a consistência do design.</li>
-        <li><strong>Violação da separação de preocupações:</strong> Mistura de estrutura (HTML) e apresentação (CSS) no mesmo arquivo, o que vai contra as boas práticas de desenvolvimento web, onde se recomenda a separação de responsabilidades para manter o código organizado e fácil de manter.</li>
-        <li><strong>Tamanho do arquivo HTML:</strong> Adicionar estilos diretamente no HTML aumenta o tamanho do documento, o que pode impactar o desempenho, especialmente em páginas complexas com muitos estilos.</li>
-        <li><strong>Escalabilidade:</strong> Em projetos grandes ou complexos, o CSS interno não escala bem, dificultando a manutenção e a consistência global do estilo.</li>
+        <li><strong>Manutenção difícil:</strong> Para projetos maiores, ter estilos dentro de cada documento HTML pode
+            se tornar confuso e difícil de gerenciar. Atualizar estilos repetidamente em várias páginas se torna uma
+            tarefa tediosa e propensa a erros.</li>
+        <li><strong>Reutilização limitada:</strong> Estilos definidos internamente não podem ser reutilizados facilmente
+            em diferentes páginas, o que pode levar à duplicação de código e dificultar a consistência do design.</li>
+        <li><strong>Violação da separação de preocupações:</strong> Mistura de estrutura (HTML) e apresentação (CSS) no
+            mesmo arquivo, o que vai contra as boas práticas de desenvolvimento web, onde se recomenda a separação de
+            responsabilidades para manter o código organizado e fácil de manter.</li>
+        <li><strong>Tamanho do arquivo HTML:</strong> Adicionar estilos diretamente no HTML aumenta o tamanho do
+            documento, o que pode impactar o desempenho, especialmente em páginas complexas com muitos estilos.</li>
+        <li><strong>Escalabilidade:</strong> Em projetos grandes ou complexos, o CSS interno não escala bem,
+            dificultando a manutenção e a consistência global do estilo.</li>
     </ul>
 
     <h2>Resumo:</h2>
-    <p>O CSS interno é útil para aplicações rápidas, testes e prototipagem, mas apresenta várias desvantagens em termos de manutenção, reutilização e organização de código em projetos maiores. Para projetos de maior escala, é recomendado usar CSS externo para garantir uma melhor separação de preocupações, reutilização de estilos e manutenção mais fácil.</p>
+    <p>O CSS interno é útil para aplicações rápidas, testes e prototipagem, mas apresenta várias desvantagens em termos
+        de manutenção, reutilização e organização de código em projetos maiores. Para projetos de maior escala, é
+        recomendado usar CSS externo para garantir uma melhor separação de preocupações, reutilização de estilos e
+        manutenção mais fácil.</p>
 
     <h2>Exemplo de CSS Interno:</h2>
     <pre><code>&lt;!DOCTYPE html&gt;
@@ -55,4 +81,5 @@
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
 </body>
+
 </html>
