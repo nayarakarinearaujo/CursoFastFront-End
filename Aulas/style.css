@@ -52,3 +52,12 @@ h2 {
     margin-top: 15px;
     padding: 15px;
 }
+
+ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul li a {
+    color: #333;
+}
