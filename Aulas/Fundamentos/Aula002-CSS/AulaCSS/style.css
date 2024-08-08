@@ -1,3 +1,4 @@
+
 * {
     margin: 0px;
     padding: 0px;
@@ -16,8 +17,13 @@ body {
     margin-bottom: 2rem;
 }
 
+.title-body {
+   color:#2c3e50;
+}
+
 h2 {
-    color: #9f0067;
+    color: #3498db; /* Azul Claro */
+    margin-top: 20px;
 }
 
 .project {
@@ -40,4 +46,8 @@ ul {
 
 ul li a {
     color: #333;
+}
+
+.codigo {
+    background-color: #ccc;
 }

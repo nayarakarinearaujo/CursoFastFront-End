@@ -1,0 +1,94 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+nav {
+    background-color: #f1f1f1f1;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #9f0067;
+    cursor: pointer;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    background-color: #d4d4d4f1;
+    border-radius: 4px;
+}
+
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    list-style-type: none;
+    padding: 10px;
+    border: 1px solid #9f0067;
+    z-index: 1000;
+    min-width: 200px;
+}
+
+nav ul li ul li {
+    margin-bottom: 5px;
+}
+
+nav ul li ul li a {
+    display: block;
+    padding: 10px;
+    color: #9f0067;
+}
+
+nav ul li ul li a:hover {
+    background-color: #f4f4f4;
+}
+
+.show {
+    display: block;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #F1DEC6;
+}
+
+#content {
+    padding: 20px;
+    margin-top: 20px;
+    /* border: 1px solid #ccc; */
+    min-height: 300px;
+}
+
+h1 {
+    color: #9f0067;
+    text-align: center;
+}
+
+h2 {
+    color: #3498db; /* Azul Claro */
+    margin-top: 20px;
+}
