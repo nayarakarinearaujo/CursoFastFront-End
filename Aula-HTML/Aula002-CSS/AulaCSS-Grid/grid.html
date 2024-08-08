@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #444;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-left: 3px solid #333;
+            overflow-x: auto;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        code {
+            background: #eee;
+            padding: 2px 4px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>O que é CSS Grid Layout?</h1>
+        <p>O CSS Grid Layout é uma técnica de layout que permite criar layouts complexos e responsivos com facilidade. Ele fornece uma maneira eficiente de criar e organizar layouts de duas dimensões (linhas e colunas) usando uma sintaxe simples e poderosa.</p>
+
+        <h2>Conceitos Básicos do CSS Grid</h2>
+        
+        <h3>Contêiner Grid:</h3>
+        <p>O contêiner grid é o elemento pai que define a área onde o grid será aplicado. Para criar um grid, você deve definir o contêiner com a propriedade <code>display: grid</code> ou <code>display: inline-grid</code>.</p>
+        <pre><code>.grid-container {
+    display: grid;
+}
+</code></pre>
+
+        <h3>Linhas e Colunas:</h3>
+        <p>O grid é dividido em linhas e colunas, e você pode definir seu layout usando as propriedades <code>grid-template-rows</code> e <code>grid-template-columns</code>. Essas propriedades definem a estrutura do grid.</p>
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 colunas com diferentes larguras */
+    grid-template-rows: 100px 200px; /* 2 linhas com diferentes alturas */
+}
+</code></pre>
+
+        <h3>Áreas do Grid:</h3>
+        <p>Você pode nomear áreas específicas do grid usando a propriedade <code>grid-template-areas</code>. Isso facilita a colocação de itens em locais específicos dentro do grid.</p>
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+}
+</code></pre>
+
+        <h3>Itens do Grid:</h3>
+        <p>Os itens dentro do grid são os elementos filhos do contêiner grid. Você pode posicionar esses itens em linhas e colunas específicas usando as propriedades <code>grid-row</code> e <code>grid-column</code>, ou utilizando áreas nomeadas.</p>
+        <pre><code>.header {
+    grid-area: header;
+}
+.sidebar {
+    grid-area: sidebar;
+}
+.main {
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
+}
+</code></pre>
+
+        <h2>Propriedades Importantes do Grid</h2>
+        
+        <h3>grid-template-columns e grid-template-rows:</h3>
+        <p>Define o número e o tamanho das colunas e linhas do grid.</p>
+        <pre><code>grid-template-columns: 1fr 2fr; /* 1 parte e 2 partes de largura */
+grid-template-rows: auto 100px; /* Altura automática para a primeira linha e 100px para a segunda linha */
+</code></pre>
+
+        <h3>grid-area:</h3>
+        <p>Define uma área específica do grid onde o item deve ser colocado.</p>
+        <pre><code>.item {
+    grid-area: 1 / 2 / 3 / 4; /* Linha de início / Coluna de início / Linha de fim / Coluna de fim */
+}
+</code></pre>
+
+        <h3>grid-gap:</h3>
+        <p>Define o espaçamento entre as células do grid.</p>
+        <pre><code>grid-gap: 10px; /* 10px de espaçamento entre linhas e colunas */
+</code></pre>
+
+        <h3>justify-items e align-items:</h3>
+        <p>Controlam o alinhamento dos itens dentro de suas células.</p>
+        <pre><code>justify-items: center; /* Alinha os itens horizontalmente no centro das células */
+align-items: start; /* Alinha os itens verticalmente no início das células */
+</code></pre>
+
+        <h3>justify-content e align-content:</h3>
+        <p>Controlam o alinhamento do grid dentro do contêiner.</p>
+        <pre><code>justify-content: center; /* Alinha o grid horizontalmente no centro do contêiner */
+align-content: space-between; /* Distribui o grid verticalmente com espaço igual entre as linhas */
+</code></pre>
+
+        <h2>Exemplos Práticos</h2>
+        
+        <h3>Layout Básico:</h3>
+        <p>Um layout com três colunas e duas linhas.</p>
+        <pre><code>&lt;div class="grid-container"&gt;
+    &lt;div class="item"&gt;1&lt;/div&gt;
+    &lt;div class="item"&gt;2&lt;/div&gt;
+    &lt;div class="item"&gt;3&lt;/div&gt;
+    &lt;div class="item"&gt;4&lt;/div&gt;
+    &lt;div class="item"&gt;5&lt;/div&gt;
+    &lt;div class="item"&gt;6&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 100px);
+    gap: 10px;
+}
+</code></pre>
+
+        <h3>Layout Responsivo:</h3>
+        <p>Um layout que ajusta o número de colunas com base no tamanho da tela.</p>
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+}
+</code></pre>
+
+        <h3>Layout com Áreas Nomeadas:</h3>
+        <p>Um layout com áreas nomeadas para header, sidebar, main e footer.</p>
+        <pre><code>.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 60px 1fr 40px;
+}
+</code></pre>
+
+        <h2>Conclusão</h2>
+        <p>O CSS Grid Layout é uma ferramenta poderosa para criar layouts complexos e flexíveis com uma abordagem mais intuitiva e menos dependente de hacks antigos. Ele permite que você crie designs responsivos e adaptáveis com facilidade, simplificando a estruturação e o alinhamento dos elementos da página.</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações no CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        h2 {
+            color: #2ecc71;
+        }
+
+        .code-block {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .example-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+        }
+
+        .example {
+            width: 200px;
+            height: 200px;
+            background-color: #3498db;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            text-align: center;
+            border-radius: 5px;
+            animation: exemplo-animacao 2s ease-in-out forwards;
+        }
+
+        @keyframes exemplo-animacao {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Animações no CSS</h1>
+    <p>No CSS, animações permitem que você adicione movimento e efeitos dinâmicos aos elementos da página. Elas podem ser usadas para melhorar a experiência do usuário e tornar a interface mais interativa e atraente. As animações CSS são definidas usando duas principais propriedades: <code>@keyframes</code> e <code>animation</code>.</p>
+
+    <h2>1. Propriedade <code>@keyframes</code></h2>
+    <p>A regra <code>@keyframes</code> define os passos intermediários (ou "frames") de uma animação. Você especifica como o estilo de um elemento deve mudar ao longo do tempo.</p>
+    <div class="code-block">
+        <pre><code>@keyframes nome-da-animacao {
+    from {
+        /* Estado inicial */
+    }
+    to {
+        /* Estado final */
+    }
+}</code></pre>
+    </div>
+    <p>Exemplo:</p>
+    <div class="code-block">
+        <pre><code>@keyframes exemplo-animacao {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}</code></pre>
+    </div>
+
+    <h2>2. Propriedade <code>animation</code></h2>
+    <p>A propriedade <code>animation</code> é usada para aplicar a animação definida com <code>@keyframes</code> a um elemento. Você pode controlar a duração, o timing, e outros aspectos da animação.</p>
+    <div class="code-block">
+        <pre><code>elemento {
+    animation: nome-da-animacao duração timing-function delay iteration-count direction fill-mode;
+}</code></pre>
+    </div>
+    <ul>
+        <li><code>nome-da-animacao</code>: O nome da animação definida com <code>@keyframes</code>.</li>
+        <li><code>duração</code>: O tempo que a animação leva para completar (ex: <code>2s</code> para dois segundos).</li>
+        <li><code>timing-function</code>: Define a velocidade da animação ao longo do tempo (ex: <code>ease</code>, <code>linear</code>, <code>ease-in</code>, <code>ease-out</code>).</li>
+        <li><code>delay</code>: O atraso antes da animação começar (ex: <code>1s</code>).</li>
+        <li><code>iteration-count</code>: Número de vezes que a animação deve ser repetida (ex: <code>infinite</code> para repetir indefinidamente).</li>
+        <li><code>direction</code>: Define a direção da animação (ex: <code>normal</code>, <code>reverse</code>, <code>alternate</code>).</li>
+        <li><code>fill-mode</code>: Define o estado do elemento antes e depois da animação (ex: <code>none</code>, <code>forwards</code>, <code>backwards</code>, <code>both</code>).</li>
+    </ul>
+    <p>Exemplo:</p>
+    <div class="code-block">
+        <pre><code>.elemento {
+    animation: exemplo-animacao 2s ease-in-out 1s forwards;
+}</code></pre>
+    </div>
+
+    <h2>Exemplo Completo de Animação CSS</h2>
+    <p>Aqui está um exemplo completo que demonstra como aplicar animações a um elemento usando as propriedades e a regra <code>@keyframes</code>.</p>
+    <div class="example-container">
+        <div class="example">Olá, Mundo!</div>
+    </div>
+
+    <h2>Vantagens das Animações CSS</h2>
+    <ul>
+        <li><strong>Performance</strong>: Animações CSS geralmente são mais eficientes do que animações JavaScript, pois os navegadores podem otimizar o desempenho de animações CSS.</li>
+        <li><strong>Facilidade de Uso</strong>: Criar animações com CSS é geralmente mais simples do que usar JavaScript para animações complexas.</li>
+        <li><strong>Flexibilidade</strong>: As animações CSS permitem uma ampla gama de efeitos visuais e interações que podem ser facilmente ajustados.</li>
+    </ul>
+
+    <h2>Considerações</h2>
+    <ul>
+        <li><strong>Compatibilidade</strong>: Embora a maioria dos navegadores modernos suporte animações CSS, sempre verifique a compatibilidade se estiver visando navegadores mais antigos.</li>
+        <li><strong>Desempenho</strong>: Animações complexas ou mal otimizadas podem afetar o desempenho da página, especialmente em dispositivos móveis.</li>
+    </ul>
+
+    <p>As animações CSS são uma ferramenta poderosa para criar interfaces dinâmicas e atraentes. Experimentar com diferentes propriedades e regras <code>@keyframes</code> pode ajudar a adicionar um toque especial ao design do seu site.</p>
+</body>
+</html>
