@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JavaScript - Function</title>
+    <link rel="stylesheet" href="aula003.css">
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio do Bootcamp Front-end</h1>
+    </header>
+
+    <nav>
+        <a href="../../../index.html">Inicio</a>
+        <a href="../../../fundamentos.html">Fundamentos</a>
+        <a href="../../../webapi.html">Web API</a>
+        <a href="../../../react.html">React</a>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <h1 class="title-body"> Aula JavaScript - Function </h1>
+
+            <h2>O que é uma função arrow?</h2>
+    <p>As funções arrow são uma sintaxe mais curta para definir funções em JavaScript, introduzida no ES6 (ECMAScript 2015). Elas têm uma estrutura diferente das funções tradicionais e oferecem algumas vantagens, como:</p>
+    <ul>
+        <li><strong>Sintaxe mais concisa:</strong> Menos código é necessário para definir uma função.</li>
+        <li><strong>Contexto <code>this</code>:</strong> As funções arrow não possuem seu próprio <code>this</code>. Em vez disso, elas herdam o <code>this</code> do escopo em que foram definidas, o que pode evitar problemas comuns com o contexto <code>this</code> em funções tradicionais.</li>
+    </ul>
+
+    <h2>Exemplo de função arrow:</h2>
+    <div class="codigo">
+        <pre><code>const square = (num) => num * num;</code></pre>
+    </div>
+
+    <h3>Detalhes da função arrow:</h3>
+    <ul>
+        <li><code>(num) =></code>: Esta é a definição da função arrow. <code>(num)</code> é o parâmetro, e <code>=></code> indica que é uma função arrow.</li>
+        <li><code>num * num</code>: Esta é a expressão que será executada e o valor será retornado automaticamente.</li>
+    </ul>
+
+    <h2>Comparação com funções tradicionais:</h2>
+    <p>Aqui está o mesmo exemplo usando uma função tradicional:</p>
+    <div  class="codigo">
+        <pre><code>function square(num) {
+        return num * num;
+        }</code></pre>
+    </div>
+
+    <p>Ambas as formas funcionam da mesma maneira, mas a função arrow é mais concisa e evita a necessidade de escrever a palavra-chave <code>function</code> e <code>return</code> (em funções de uma única linha).</p>
+
+    <h3>Resumindo:</h3>
+    <p>Sim, a forma <code>const square = (num) => num * num;</code> é uma função arrow em JavaScript, caracterizada por sua sintaxe curta e pelo comportamento específico em relação ao <code>this</code>.</p>
+
+        </div>
+    </main>
+</body>
+
+</html>

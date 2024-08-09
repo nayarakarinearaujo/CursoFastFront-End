@@ -1,0 +1,4 @@
+
+// *DOM
+
+document.getElementById('idElemento')
