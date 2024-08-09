@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula JavaScript - Arrow</title>
+    <link rel="stylesheet" href="../../Styles/global.css">
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio do Bootcamp Front-end</h1>
+    </header>
+
+    <nav>
+        <a href="../../../index.html">Inicio</a>
+        <a href="../../../fundamentos.html">Fundamentos</a>
+        <a href="../../../webapi.html">Web API</a>
+        <a href="../../../react.html">React</a>
+    </nav>
+
+    <main>
+        <div class="container">
+
+            <h1 class="title-body"> Aula JavaScript - DOM</h1>
+
+                <h2>O que é DOM?</h2>
+            
+            <main>
+                <article>
+                    <p>O DOM (Document Object Model) é uma interface de programação que permite aos desenvolvedores
+                        interagirem com documentos HTML e XML. Ele representa a estrutura de um documento como uma
+                        árvore de nós, onde cada nó corresponde a uma parte do documento, como elementos, atributos,
+                        texto, etc.</p>
+
+                    <h2>Como funciona o DOM?</h2>
+                    <p>Quando uma página web é carregada, o navegador cria o DOM a partir do HTML da página. Esse modelo
+                        permite que linguagens de programação, como JavaScript, acessem e manipulem a estrutura e o
+                        conteúdo da página de forma dinâmica.</p>
+
+                    <h2>Componentes do DOM</h2>
+                    <ul>
+                        <li><strong>Elementos:</strong> Cada tag HTML é representada como um elemento no DOM. Por
+                            exemplo, <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>, e <code>&lt;h1&gt;</code> são
+                            todos elementos.</li>
+                        <li><strong>Atributos:</strong> São propriedades dos elementos, como <code>id</code>,
+                            <code>class</code>, <code>src</code>, <code>href</code>, etc.</li>
+                        <li><strong>Nós de texto:</strong> O conteúdo textual de um elemento, como o texto dentro de um
+                            parágrafo <code>&lt;p&gt;</code>, é um nó de texto no DOM.</li>
+                    </ul>
+
+                    <h2>Manipulação do DOM</h2>
+                    <p>JavaScript pode ser usado para alterar a estrutura, o estilo e o conteúdo de uma página após ela
+                        ter sido carregada. Isso é feito usando métodos e propriedades do DOM.</p>
+
+                    <h3>Selecionar Elementos</h3>
+                    <p>Para manipular elementos, primeiro você precisa selecioná-los.</p>
+                    <pre><code>document.getElementById("id"); // Seleciona um elemento pelo seu ID.</code></pre>
+                    <pre><code>document.getElementsByClassName("classe"); // Seleciona todos os elementos com uma determinada classe.</code></pre>
+                    <pre><code>document.querySelector("seletor"); // Seleciona o primeiro elemento que corresponde a um seletor CSS.</code></pre>
+
+                    <h3>Alterar Conteúdo</h3>
+                    <p>Você pode alterar o conteúdo de um elemento usando <code>innerHTML</code> ou
+                        <code>textContent</code>.</p>
+                    <pre><code>document.getElementById("exemplo").innerHTML = "Novo conteúdo";</code></pre>
+
+                    <h3>Alterar Estilos</h3>
+                    <p>Você pode alterar os estilos CSS de um elemento usando a propriedade <code>style</code>.</p>
+                    <pre><code>document.getElementById("exemplo").style.color = "blue";</code></pre>
+
+                    <h3>Adicionar e Remover Elementos</h3>
+                    <p>Você pode criar novos elementos, adicioná-los ao DOM e também remover elementos existentes.</p>
+                    <pre><code>var novoElemento = document.createElement("div");
+    novoElemento.innerHTML = "Eu sou um novo elemento!";
+    document.body.appendChild(novoElemento);
+    
+    var elemento = document.getElementById("exemplo");
+    elemento.remove();</code></pre>
+
+                    <h2>Exemplo Prático</h2>
+                    <p>Aqui está um exemplo simples de como o DOM pode ser manipulado:</p>
+                    <pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="pt-BR"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Exemplo de Manipulação do DOM&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1 id="titulo"&gt;Olá, Mundo!&lt;/h1&gt;
+        &lt;button onclick="alterarTitulo()"&gt;Clique para alterar o título&lt;/button&gt;
+    
+        &lt;script&gt;
+            function alterarTitulo() {
+                document.getElementById("titulo").textContent = "Título Alterado!";
+            }
+        &lt;/script&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+                    <p>Nesse exemplo, ao clicar no botão, o texto do título <code>&lt;h1&gt;</code> é alterado para
+                        "Título Alterado!". Isso mostra como o DOM permite interatividade em uma página web.</p>
+                </article>
+            </main>
+</body>
+
+</html>
+</div>
+</main>
+</body>
+
+</html>
