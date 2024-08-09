@@ -43,12 +43,29 @@ main {
     margin: auto;
 }
 
-h1 {
+.section-info h1 {
     color: #9f0067;
+    font-size: 2rem;
+}
+
+.section-info {
+    padding: 5px;
+    margin-bottom: 10px;
 }
 
 h2 {
     color: #ff6003;
+}
+
+.module-overview {
+    background-color: #e4e1e1;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.module-overview h3 a {
+    margin-bottom: 1rem;
+    color: #333;
 }
 
 .module-overview {
