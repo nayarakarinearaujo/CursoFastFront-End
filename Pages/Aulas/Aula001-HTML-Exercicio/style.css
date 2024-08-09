@@ -1,0 +1,232 @@
+/* Reseta margens e preenchimentos */
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Estiliza o corpo da página */
+body {
+  background-color: #f1e1df;
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 15px;
+  margin: 50px;
+  box-sizing: border-box; 
+}
+
+/* Estiliza o cabeçalho */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Estiliza a linha horizontal */
+hr {
+  border: none;
+  height: 2px;
+  background-color: #fff;
+  width: 100%;
+  margin-top: 25px;
+}
+
+h1 {
+  color: #dc4632;
+}
+
+h2 {
+  color: #dc4632;
+  margin: 20px;
+  text-align: center; 
+}
+
+/* Estiliza os rótulos dos campos */
+label {
+  font-size: 1rem;
+  padding: 10px;
+  display: block;
+  text-align: left; 
+}
+
+/* Estiliza os campos de entrada de texto e número */
+input[type="text"],
+input[type="number"] {
+  background-color: #f1f1f1;
+  width: 100%; 
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 2px solid #f1f1f1;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover {
+  background-color: #cbc3c3ac;
+}
+
+
+/* Estiliza o campo de interesses específico */
+.inputInteresse {
+  height: 65px;
+  width: 100%; 
+}
+
+/* Ajusta a cor da borda quando o campo está em foco */
+input[type="text"]:focus,
+input[type="number"]:focus {
+  border-color: #007BFF;
+}
+
+/* Estiliza o contêiner do formulário */
+div.form {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  width: 100%; 
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+/* Estiliza o botão de cadastro */
+div > input[type="button"] {
+  width: 100px; 
+  height: 50px;
+  border-radius: 6px;
+  background: #64c8f0;
+  color: #fff;
+  border: none;
+  margin-top: 20px; 
+}
+
+/* Estiliza o botão quando em foco */
+input[type="button"]:hover {
+  background: #46aad2;
+  color: #060606;
+}
+
+/* Estiliza a tabela */
+table {
+  width: 100%;
+  background-color: #f1f1f1;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.182);
+
+}
+
+/* Estiliza as células da tabela */
+th,
+td {
+  font-size: 0.9rem;
+  border: 1px solid #c2bfbf;
+  padding: 20px;
+  text-align: left;
+}
+
+/* Estiliza o cabeçalho da tabela */
+th {
+  font-size: 1.1rem;
+  text-align: center;
+  padding: 5px;
+}
+
+/* Botões de editar e deletar */
+.table-button {
+  text-align: center;
+  width: 15%;
+}
+
+.btnedit, 
+.btndelete {
+  width: 100px; 
+  height: 25px;
+  border-radius: 6px;
+  background: #64c8f0;
+  color: #fff;
+  border: none;
+  margin-top: 20px; 
+}
+
+.btnedit:hover, 
+.btndelete:hover {
+  background: #46aad2;
+  color: #060606;
+}
+
+
+
+/* Responsividade para telas de smartphones */
+@media (max-width: 768px) {
+  body {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .inputInteresse {
+    width: 100%;
+  }
+
+  div .form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-button {
+    justify-content: center;
+  }
+
+  input[type="button"] {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  label {
+    font-size: 0.9rem;
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+
+  .inputInteresse {
+    font-size: 0.9rem;
+    height: auto;
+  }
+
+  .form-button {
+    margin-top: 10px;
+  }
+
+  table {
+    font-size: 0.8rem;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}
