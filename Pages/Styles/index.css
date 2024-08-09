@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #444;
+    background-color: #9f0067;
     color: white;
     padding: 1rem;
     text-align: center;
@@ -23,7 +23,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #555;
+    background-color:  #ff6003;
 }
 
 nav a {
@@ -34,17 +34,21 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #666;
+    background-color: #e95905b0;
 }
 
 main {
     padding: 2rem;
-    max-width: 800px;
+    max-width: 1200px;
     margin: auto;
 }
 
+h1 {
+    color: #9f0067;
+}
+
 h2 {
-    color: #333;
+    color: #ff6003;
 }
 
 .module-overview {
