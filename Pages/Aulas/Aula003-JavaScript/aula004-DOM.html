@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body {
+            padding: 10px;
+            margin: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div{
+            padding: 10px;
+            background-color: #f1f1f1;
+            width: 50%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            margin: auto;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.264);
+        }
+
+        h1 {
+            background-color: blueviolet;
+            color: white;
+        }
+
+        button {
+            padding: 20px;
+            border-radius: 6px;
+            background-color: rgb(199, 156, 240);
+            border: none;
+            color: white;
+        }
+
+        button:hover{
+           background-color:   rgb(221, 193, 248);
+           color: black;
+        }
+    </style>
+</head>
+<body>
+   <div>
+       <h1>Contador: <span id="contador">0</span></h1>
+       <button id="decrementarBtn">Decrementar</button>
+       <button id="incrementarBtn">Incrementar</button>
+
+   </div>
+
+<script>
+    let contador = 0;
+    const contadorDisplay = document.getElementById('contador');
+    const incrementarBtn = document.getElementById('incrementarBtn')
+    const decrementarBtn = document.getElementById('decrementarBtn')
+
+    incrementarBtn.addEventListener('click', () => {
+        contador++;
+        contadorDisplay.textContent = contador;
+    })
+
+    decrementarBtn.addEventListener('click', () => {
+        contador--;
+        contadorDisplay.textContent = contador;
+    })
+
+</script>
+
+</body>
+</html>
