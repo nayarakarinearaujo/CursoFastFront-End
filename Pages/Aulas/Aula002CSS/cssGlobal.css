@@ -160,7 +160,8 @@ h3 {
 }
 
 .codigo,
-.example{
+.example,
+.code-block{
     width: 80%;
     background-color: #3e5871;
     /* Cinza Escuro */
@@ -189,4 +190,11 @@ h3 {
 strong {
     color: #34495e;
     font-size: 1.2rem;
+}
+
+/* Section animation */
+
+code {
+    font-weight:  lighter;
+    font-size: 0.9rem;
 }
