@@ -198,3 +198,14 @@ code {
     font-weight:  lighter;
     font-size: 0.9rem;
 }
+
+/* Section function */
+
+.container-function-ex {
+    color: white;
+}
+
+.example h4 {
+   
+    font-size: 1rem;
+}

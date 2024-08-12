@@ -21,14 +21,18 @@
     </nav>
 
     <main>
+
         <div class="container">
+            
             <h1>Funções CSS</h1>
+
+            <h2>1. <code>calc()</code></h2>
+
             <p>No CSS, funções são uma maneira de aplicar cálculos e transformações dinâmicas aos valores das propriedades. Elas oferecem uma forma de manipular e calcular valores diretamente no CSS, proporcionando flexibilidade e precisão na criação de layouts e estilos.</p>
-            <div class="example">
-                <h2>1. <code>calc()</code></h2>
+            <div class="example" style="width: 100%;">
                 <p>A função <code>calc()</code> permite realizar cálculos diretamente no CSS. Você pode usar <code>calc()</code> para definir valores dinâmicos, como larguras e alturas, baseados em cálculos matemáticos.</p>
                 <pre><code>property: calc(expression);</code></pre>
-                <h3>Exemplo:</h3>
+                <h4>Exemplo:</h4>
                 <pre><code>
             .container {
             width: calc(100% - 20px); /* Largura total menos 20 pixels */
@@ -36,44 +40,48 @@
             }
                 </code></pre>
             </div>
-            <div class="example">
-                <h2>2. <code>min()</code></h2>
+
+            <h2>2. <code>min()</code></h2>
+            <div class="example" style="width: 100%;">
                 <p>A função <code>min()</code> retorna o menor valor entre os valores fornecidos. É útil para garantir que um valor não exceda um determinado limite.</p>
                 <pre><code>property: min(value1, value2);</code></pre>
-                <h3>Exemplo:</h3>
+                <h4>Exemplo:</h4>
                 <pre><code>
             .box {
             width: min(80%, 400px); /* A largura será 80% da largura do contêiner ou 400 pixels, o menor dos dois */
             }
                 </code></pre>
             </div>
-            <div class="example">
-                <h2>3. <code>max()</code></h2>
+
+            <h2>3. <code>max()</code></h2>
+            <div class="example" style="width: 100%;">
                 <p>A função <code>max()</code> retorna o maior valor entre os valores fornecidos. Isso garante que um valor tenha pelo menos um determinado limite.</p>
                 <pre><code>property: max(value1, value2);</code></pre>
-                <h3>Exemplo:</h3>
+                <h4>Exemplo:</h4>
                 <pre><code>
             .box {
             width: max(200px, 50%); /* A largura será 200 pixels ou 50% da largura do contêiner, o maior dos dois */
             }
                 </code></pre>
             </div>
-            <div class="example">
-                <h2>4. <code>clamp()</code></h2>
+
+            <h2>4. <code>clamp()</code></h2>
+            <div class="example" style="width: 100%;">
                 <p>A função <code>clamp()</code> é usada para definir um valor que está dentro de um intervalo de valores. É útil para definir tamanhos de fonte responsivos, por exemplo.</p>
                 <pre><code>property: clamp(min, preferred, max);</code></pre>
-                <h3>Exemplo:</h3>
+                <h4>Exemplo:</h4>
                 <pre><code>
             .text {
             font-size: clamp(16px, 4vw, 24px); /* O tamanho da fonte será pelo menos 16 pixels, idealmente 4% da largura da tela, e no máximo 24 pixels */
             }
                 </code></pre>
             </div>
-            <div class="example">
-                <h2>5. <code>var()</code></h2>
+
+            <h2>5. <code>var()</code></h2>
+            <div class="example" style="width: 100%;">
                 <p>A função <code>var()</code> é usada para acessar o valor de uma variável CSS definida anteriormente. As variáveis são úteis para garantir consistência e facilitar a manutenção do código.</p>
                 <pre><code>property: var(--variable-name);</code></pre>
-                <h3>Exemplo:</h3>
+                <h4>Exemplo:</h4>
                 <pre><code>
             :root {
             --main-color: #3498db;
@@ -82,20 +90,6 @@
             .button {
             background-color: var(--main-color); /* Usa a variável definida para a cor de fundo */
             }
-                </code></pre>
-            </div>
-            <div class="example">
-                <h2>Exemplo Completo de Uso de Funções CSS</h2>
-                <pre><code>
-            <div class="container">
-                <h1>Exemplo de Funções CSS</h1>
-                <p class="responsive-text">Este texto tem um tamanho de fonte responsivo usando a função clamp().</p>
-                <div class="dynamic-width">
-                    Este elemento tem uma largura dinâmica usando a função max().
-                </div>
-            </div>
-            </body>
-            </html>
                 </code></pre>
             </div>
             <h2>Conclusão</h2>
