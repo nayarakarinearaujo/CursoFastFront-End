@@ -14,7 +14,8 @@ body {
 }
 
 header {
-    background-color: #444;
+    background-color: #9f0067;
+    /* background-color: #444; */
     color: white;
     padding: 1rem;
     text-align: center;
@@ -23,7 +24,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color: #555;
+    background-color: #ff6003;
 }
 
 nav a {
@@ -34,7 +35,7 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #666;
+    background-color: #e95905b0;
 }
 
 main {
@@ -44,7 +45,11 @@ main {
 }
 
 h2 {
-    color: #333;
+    color: #9f0067;;
+}
+
+h3 {
+    color: #ff6003
 }
 
 
@@ -60,6 +65,11 @@ h2 {
 .container h1 {
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
+    color: #9f0067;
+}
+
+.container-subtitle {
+    background-color: beige;
 }
 
 .container ul {
@@ -71,7 +81,7 @@ h2 {
 }
 
 .container ul li a {
-    color: #448c1c;
+    color: #333;
     text-decoration: none;
 }
 
@@ -87,8 +97,8 @@ h2 {
 .module h2 {
     font-size: 1.6rem;
     margin-bottom: 1rem;
-    color: #21311f;
-    background-color: beige;
+    color: #9f0067;
+    
 }
 
 .project {
@@ -98,7 +108,7 @@ h2 {
 .project h3 {
     font-size: 1.4rem;
     margin-bottom: 0.5rem;
-    color: #685c47;
+    color: #ff6003;
 }
 
 .project p {
@@ -115,7 +125,7 @@ h2 {
 
 .container_activity h3 {
     margin-bottom: 1rem;
-    color: #448c1c;
+    color: #333;
 }
 
 .container_activity ul {
@@ -135,8 +145,9 @@ h2 {
     text-decoration: underline;
 }
 
-.codigo {
-    width: 60%;
+.codigo,
+.example{
+    width: 80%;
     background-color: #3e5871;
     /* Cinza Escuro */
     color: #ecf0f1;
@@ -148,4 +159,14 @@ h2 {
     border-radius: 5px;
     overflow-x: auto;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.code {
+    background: white;
+    font-size: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    margin-left: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
