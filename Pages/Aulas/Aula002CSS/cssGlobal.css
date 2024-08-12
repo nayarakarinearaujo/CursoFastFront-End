@@ -45,7 +45,8 @@ main {
 }
 
 h2 {
-    color: #9f0067;;
+    color: #9f0067;
+    margin-bottom: 10px;
 }
 
 h3 {
@@ -60,6 +61,19 @@ h3 {
     margin-bottom: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-items {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container-items-title {
+    font-size: 1.5rem;
+    color: #ff6003;
 }
 
 .container h1 {
@@ -161,12 +175,18 @@ h3 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.code {
+.code-container {
     background: white;
     font-size: 1rem;
     padding: 2rem;
     margin-bottom: 2rem;
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+strong {
+    color: #34495e;
+    font-size: 1.2rem;
 }
