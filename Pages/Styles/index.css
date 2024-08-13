@@ -11,7 +11,12 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    background-image: url('../imgBody.png');
+    background-position: right bottom; 
+    background-repeat: no-repeat;
+    background-size: 50%; 
 }
+
 
 header {
     background-color: #9f0067;
@@ -23,7 +28,7 @@ header {
 nav {
     display: flex;
     justify-content: center;
-    background-color:  #ff6003;
+    background-color: #ff6003;
 }
 
 nav a {
@@ -39,8 +44,9 @@ nav a:hover {
 
 main {
     padding: 2rem;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: auto;
+    position: relative; 
 }
 
 .section-info h1 {
@@ -80,3 +86,10 @@ h2 {
     margin: 0.5rem 0;
 }
 
+.image {
+    position: absolute; 
+    bottom: 0; 
+    right: 0; 
+    margin: 10px; 
+    margin-right: -30px;
+}
