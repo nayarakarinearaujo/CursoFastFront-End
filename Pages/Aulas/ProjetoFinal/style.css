@@ -11,14 +11,14 @@ main {
     border-radius: 8px;
 }
 
-.container-header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
 }
 
-.header-nav {
+nav {
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -26,14 +26,27 @@ main {
 }
 
 .container-img {
-    background-color: #DFDFDF Copy;
-    border-radius: 8px;
+    width: 375px;
+    height: 330px;
+    top: -75;
+    left: -348px;
+    border-radius: 10px;
+    border: 1px solid #FFFDFD;
+    background-color: #DFDFDF;
+}
+
+.container-info {
+    width: 403px;
+    height: 329px;
+    top: -75;
+    left: 69px;
+    border: 1px solid #474747;
 }
 
 .btn-add-to-cart {
     width: 175.13px;
     height: 46px;
-    margin-top: 204px;
-    margin-left: 134.67px;
+    top: 204px;
+    left: 134.67px;
     border-radius: 10px;
 }
