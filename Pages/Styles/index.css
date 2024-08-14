@@ -12,9 +12,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     background-image: url('../imgBody.png');
-    background-position: right bottom; 
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-size: 50%; 
+    background-position: right bottom; 
 }
 
 
