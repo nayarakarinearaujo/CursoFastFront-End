@@ -5,23 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OLD SHOP</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <nav>
-        </nav>
-        <input type="text">
-        <div>
-            <img src="" alt="">
-            <input type="text">
-        </div>
-    </header>
-
     <main>
-        <section>
-            <div>
+        <header class="container-header">
+            <nav>
+                <h2>OLD SHOP</h2>
+                <ul class="header-nav">
+                    <li>Relíquias</li>
+                    <li>Velharias</li>
+                    <li>Nostalgia</li>
+                </ul>
+            </nav>
+            <input class="header-search" type="search" placeholder="Pesquisar">
+            <span class="header-qtd">
+                <img src="" alt="">
+            </span>
+            <div class="cart">
+                <img src="" alt="">
+                <span class="cart-qtd">0</span>
+            </div>
+        </header>
+
+
+        <section class="container-img">
+            <div class="imgs">
                 <img src="" alt="">
                 <div>
                     <img src="" alt="">
@@ -31,21 +43,27 @@
             </div>
         </section>
 
-        <section>
-            <div>
-                <h1></h1>
-                <p></p>
+        <section class="container-info">
+            <div class="info">
+                <h1>Fita VHS Basf T-120 Extra Quality</h1>
+                <p>por old eletrônicos</p>
                 <div>
                     <div>
-                        <span></span>
+                        <span>R$ 40</span>
                     </div>
                     <div>
-                        <p></p>
-                        <p></p>
+                        <p>Desconto 10%</p>
+                        <p>no PIX</p>
                     </div>
                 </div>
             </div>
-            <p></p>
+            <p>Se você está em busca de uma fita VHS de alta qualidade, a FITA VHS BASF T-120 Extra Quality é a escolha
+                ideal para você.</p>
+            <form>
+                <label for="quantity">Quantidade:</label>
+                <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
+                <button id="btn-add" class="btn-add-to-cart" type="submit">Adicionar ao Carrinho</button>
+            </form>
         </section>
     </main>
 
