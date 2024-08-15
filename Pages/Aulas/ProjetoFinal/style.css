@@ -125,6 +125,13 @@ nav ul li {
     border-radius: 8px;
 }
 
+.info div {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    flex-wrap: wrap; 
+}
+
 .text-desc {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
@@ -164,12 +171,6 @@ nav ul li {
     line-height: 21px;
 }
 
-* Estilos do formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-}
 /* Estilo do formulário */
 form {
     display: flex;
@@ -187,8 +188,10 @@ form label {
 
 /* Estilo do input */
 form input[type="number"] {
-    width: 60px; 
+    width: 45px; 
     height: 35px;
+    top: 215p´x;
+    left: 70px;
     border-radius: 10px;
     border: 1px solid #474747;
     font-size: 16px;
