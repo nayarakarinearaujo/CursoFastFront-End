@@ -23,7 +23,7 @@
             </nav>
             <div class="header-search-container">
                 <input class="header-search" type="search" placeholder="Pesquisar">
-                <span class="header-qtd">
+                <span id="cart-quantity" class="cart-qtd">0</span>
                     <img src="" alt="">
                 </span>
             </div>
@@ -64,11 +64,13 @@
                 <p>Se você está em busca de uma fita VHS de alta qualidade, a FITA VHS BASF T-120 Extra Quality é a
                     escolha
                     ideal para você.</p>
-                <form>
-                    <label for="quantity">Quantidade:</label>
+
+                    <form id="add-to-cart-form">
+                        <label for="quantity">Quantidade:</label>
                     <input type="number" id="quantity" name="quantity" min="1" max="100" value="1">
                     <button id="btn-add" class="btn-add-to-cart" type="submit">Adicionar ao Carrinho</button>
                 </form>
+                
             </section>
         </div>
     </main>
