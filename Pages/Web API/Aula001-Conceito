@@ -1,1 +1,41 @@
-Conceitos (API, HTTP, URL, requisições e respostas)
+* Conceitos (API, HTTP, URL, requisições e respostas)
+API é o que liga o FRONT com o BACK
+
+HTTP:
+Hyper Text Transport Protocol
+Protocolo de comunicação: convenção de regras e padrões, conexão e troca de dados entre dois sistemas computacionais
+
+O que é o HTTP?
+HTTP (Protocolo de Transferência de Hipertexto) é o jeito como os computadores trocam informações na internet. Quando você acessa um site, seu navegador usa o HTTP para pedir as páginas e receber as respostas do servidor.
+
+Como o HTTP Funciona:
+Cliente e Servidor: O navegador é o cliente e o servidor é o computador onde o site está hospedado. O cliente pede algo (como uma página) e o servidor responde.
+
+Métodos HTTP:
+
+GET: Pede para ver uma página.
+POST: Envia informações para o servidor (como quando você preenche um formulário).
+PUT: Atualiza informações.
+DELETE: Apaga informações.
+URL: É o endereço de um site, como https://exemplo.com.
+
+Requisição HTTP: O navegador envia uma mensagem pedindo algo ao servidor.
+
+Linha de requisição: Diz o que está sendo pedido.
+Cabeçalhos: São informações extras, como o tipo de conteúdo.
+Corpo da requisição: Se estiver enviando dados, eles vão aqui.
+Resposta HTTP: O servidor responde ao navegador com:
+
+Linha de status: Diz se deu certo ou não (como "200 OK" ou "404 Não Encontrado").
+Cabeçalhos: Mais informações extras.
+Corpo da resposta: O que você pediu, como a página web.
+HTTPS: É a versão segura do HTTP, que protege os dados com criptografia.
+
+Exemplo:
+Você digita https://exemplo.com no navegador.
+O navegador pede a página ao servidor.
+O servidor envia a página de volta.
+O navegador mostra a página para você.
+Por que o HTTP é importante?
+O HTTP é o que permite que você acesse sites na internet. Sem ele, os navegadores e servidores não conseguiriam se comunicar. É o que faz a web funcionar!
+
