@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 body {
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     background-color: pink;
+    font-family: 'Roboto', sans-serif; /* Garanta que a fonte seja aplicada */
 }
 
 main {
@@ -18,13 +18,53 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    background-color: #FFFDFD;
 }
 
 nav {
     display: flex;
+    align-items: center; 
+    margin: 0;
+    padding: 0;
+}
+
+.header-logo {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 40px;
+    margin-right: 20px; 
+}
+
+nav ul {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+nav ul li {
+    width: 75px;
+    height: 33px;
+    top: -154px;
+    left: -164px;
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px; 
+    line-height: 33.24px;
+    cursor: pointer; 
+    padding: 10px;
+}
+
+.header-logo {
+    width: 109px;
+    height: 40px;
+    top: -159px;
+    left: -348px;
+    font-family: 'Mukta', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 39.89px;
+    color: #1565C0;
 }
 
 .header-search {
