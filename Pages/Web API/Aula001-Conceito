@@ -38,4 +38,38 @@ O servidor envia a página de volta.
 O navegador mostra a página para você.
 Por que o HTTP é importante?
 O HTTP é o que permite que você acesse sites na internet. Sem ele, os navegadores e servidores não conseguiriam se comunicar. É o que faz a web funcionar!
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Métodos de requisição HTTP
+
+Métodos de requisição HTTP são as maneiras que o navegador usa para pedir ou enviar dados a um servidor na internet. Cada método tem uma função específica. Aqui estão os principais:
+
+1. GET
+O que faz: Pede dados do servidor, como quando você abre uma página web.
+Exemplo: Quando você digita um endereço de site no navegador, ele faz uma requisição GET para obter a página.
+
+2. POST
+O que faz: Envia dados para o servidor. Usado para enviar informações que precisam ser processadas, como ao preencher e enviar um formulário.
+Exemplo: Quando você se cadastra em um site, o formulário de cadastro envia seus dados com uma requisição POST.
+
+3. PUT
+O que faz: Atualiza ou substitui dados no servidor.
+Exemplo: Se você está editando seu perfil em um site, a requisição PUT pode ser usada para enviar as novas informações.
+
+4. DELETE
+O que faz: Remove dados do servidor.
+Exemplo: Se você decide excluir sua conta em um site, uma requisição DELETE pode ser usada para apagar seus dados.
+
+5. PATCH
+O que faz: Aplica pequenas mudanças a dados existentes no servidor, sem substituir tudo.
+Exemplo: Se você só quer mudar seu e-mail no perfil, uma requisição PATCH pode alterar apenas essa informação.
+
+6. HEAD
+O que faz: Pede só o cabeçalho de uma resposta, sem o conteúdo completo.
+Exemplo: Usado para verificar se uma página existe sem baixar todo o conteúdo dela.
+
+Como funcionam na prática:
+Quando você acessa uma página, o navegador usa GET para pedir a página ao servidor.
+Se você envia um formulário, ele pode usar POST para enviar as informações.
+Se você edita ou deleta algo, pode usar PUT, PATCH, ou DELETE para fazer as mudanças.
+Esses métodos ajudam a organizar e controlar a comunicação entre seu navegador e os servidores da web.

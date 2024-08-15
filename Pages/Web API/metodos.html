@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos de Requisição HTTP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        p, li {
+            margin: 10px 0;
+        }
+        ul {
+            list-style-type: square;
+            margin-left: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .method-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <h2>Métodos de Requisição HTTP</h2>
+    <p>Métodos de requisição HTTP são as maneiras que o navegador usa para pedir ou enviar dados a um servidor na internet. Cada método tem uma função específica. Aqui estão os principais:</p>
+
+    <h3>1. <span class="method-title">GET</span></h3>
+    <p><strong>O que faz:</strong> Pede dados do servidor, como quando você abre uma página web.</p>
+    <p><strong>Exemplo:</strong> Quando você digita um endereço de site no navegador, ele faz uma requisição GET para obter a página.</p>
+
+    <h3>2. <span class="method-title">POST</span></h3>
+    <p><strong>O que faz:</strong> Envia dados para o servidor. Usado para enviar informações que precisam ser processadas, como ao preencher e enviar um formulário.</p>
+    <p><strong>Exemplo:</strong> Quando você se cadastra em um site, o formulário de cadastro envia seus dados com uma requisição POST.</p>
+
+    <h3>3. <span class="method-title">PUT</span></h3>
+    <p><strong>O que faz:</strong> Atualiza ou substitui dados no servidor.</p>
+    <p><strong>Exemplo:</strong> Se você está editando seu perfil em um site, a requisição PUT pode ser usada para enviar as novas informações.</p>
+
+    <h3>4. <span class="method-title">DELETE</span></h3>
+    <p><strong>O que faz:</strong> Remove dados do servidor.</p>
+    <p><strong>Exemplo:</strong> Se você decide excluir sua conta em um site, uma requisição DELETE pode ser usada para apagar seus dados.</p>
+
+    <h3>5. <span class="method-title">PATCH</span></h3>
+    <p><strong>O que faz:</strong> Aplica pequenas mudanças a dados existentes no servidor, sem substituir tudo.</p>
+    <p><strong>Exemplo:</strong> Se você só quer mudar seu e-mail no perfil, uma requisição PATCH pode alterar apenas essa informação.</p>
+
+    <h3>6. <span class="method-title">HEAD</span></h3>
+    <p><strong>O que faz:</strong> Pede só o cabeçalho de uma resposta, sem o conteúdo completo.</p>
+    <p><strong>Exemplo:</strong> Usado para verificar se uma página existe sem baixar todo o conteúdo dela.</p>
+
+    <h3>Como funcionam na prática:</h3>
+    <p>Quando você acessa uma página, o navegador usa <strong>GET</strong> para pedir a página ao servidor.</p>
+    <p>Se você envia um formulário, ele pode usar <strong>POST</strong> para enviar as informações.</p>
+    <p>Se você edita ou deleta algo, pode usar <strong>PUT</strong>, <strong>PATCH</strong>, ou <strong>DELETE</strong> para fazer as mudanças.</p>
+    <p>Esses métodos ajudam a organizar e controlar a comunicação entre seu navegador e os servidores da web.</p>
+</body>
+</html>
