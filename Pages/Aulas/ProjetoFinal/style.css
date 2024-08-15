@@ -27,6 +27,28 @@ nav {
     padding: 0;
 }
 
+.header-search {
+    width: 183px;
+    height: 25px;
+    top: -150px;
+    left: 198px;
+    gap: 0px;
+    border-radius: 10px;
+    border: 1px solid #DFDFDF;
+    opacity: 0px;
+}
+
+.cart {
+    width: 59px;
+    height: 25px;
+    border-radius: 10px;
+    border: 1px solid #DFDFDF;
+    /* Correção aqui */
+    background-color: white;
+    /* Adicionado para garantir que o fundo seja visível */
+}
+
+
 .container-img {
     width: 375px;
     height: 330px;
