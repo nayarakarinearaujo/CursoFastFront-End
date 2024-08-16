@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conceitos de API e HTTP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h2 {
-            color: #2c3e50;
-        }
-        p {
-            margin: 10px 0;
-        }
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
-        }
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-    </style>
+    <link rel="stylesheet" href="../Styles/global.css">
 </head>
+
 <body>
-    <h2>Conceitos (API, HTTP, URL, requisições e respostas)</h2>
-    <p>API é o que liga o <strong>FRONT</strong> com o <strong>BACK</strong>.</p>
+    <header>
+        <h1>Portfolio do Bootcamp Front-end</h1>
+    </header>
 
-    <h3>HTTP:</h3>
-    <p><strong>Hyper Text Transport Protocol</strong><br>
-    Protocolo de comunicação: convenção de regras e padrões, conexão e troca de dados entre dois sistemas computacionais.</p>
+    <nav>
+        <a href="../../../index.html">Inicio</a>
+        <a href="../../../fundamentos.html">Fundamentos</a>
+        <a href="../../../webapi.html">Web API</a>
+        <a href="../../../react.html">React</a>
+    </nav>
 
-    <h3>O que é o HTTP?</h3>
-    <p>HTTP (Protocolo de Transferência de Hipertexto) é o jeito como os computadores trocam informações na internet. Quando você acessa um site, seu navegador usa o HTTP para pedir as páginas e receber as respostas do servidor.</p>
+    <main>
+        <div class="container">
 
-    <h3>Como o HTTP Funciona:</h3>
-    <p><strong>Cliente e Servidor:</strong> O navegador é o cliente e o servidor é o computador onde o site está hospedado. O cliente pede algo (como uma página) e o servidor responde.</p>
+            <h1 class="title-body"> Aula Web API - Conceitos de API e HTTP</h1>
 
-    <h3>Métodos HTTP:</h3>
-    <ul>
-        <li><strong>GET:</strong> Pede para ver uma página.</li>
-        <li><strong>POST:</strong> Envia informações para o servidor (como quando você preenche um formulário).</li>
-        <li><strong>PUT:</strong> Atualiza informações.</li>
-        <li><strong>DELETE:</strong> Apaga informações.</li>
-    </ul>
 
-    <h3>URL:</h3>
-    <p>É o endereço de um site, como <code>https://exemplo.com</code>.</p>
+            <h2>Conceitos (API, HTTP, URL, requisições e respostas)</h2>
+            <p>API é o que liga o <strong>FRONT</strong> com o <strong>BACK</strong>.</p>
 
-    <h3>Requisição HTTP:</h3>
-    <p>O navegador envia uma mensagem pedindo algo ao servidor.</p>
-    <ul>
-        <li><strong>Linha de requisição:</strong> Diz o que está sendo pedido.</li>
-        <li><strong>Cabeçalhos:</strong> São informações extras, como o tipo de conteúdo.</li>
-        <li><strong>Corpo da requisição:</strong> Se estiver enviando dados, eles vão aqui.</li>
-    </ul>
+            <h3>HTTP:</h3>
+            <p><strong>Hyper Text Transport Protocol</strong><br>
+                Protocolo de comunicação: convenção de regras e padrões, conexão e troca de dados entre dois sistemas
+                computacionais.</p>
 
-    <h3>Resposta HTTP:</h3>
-    <p>O servidor responde ao navegador com:</p>
-    <ul>
-        <li><strong>Linha de status:</strong> Diz se deu certo ou não (como "200 OK" ou "404 Não Encontrado").</li>
-        <li><strong>Cabeçalhos:</strong> Mais informações extras.</li>
-        <li><strong>Corpo da resposta:</strong> O que você pediu, como a página web.</li>
-    </ul>
+            <h3>O que é o HTTP?</h3>
+            <p>HTTP (Protocolo de Transferência de Hipertexto) é o jeito como os computadores trocam informações na
+                internet. Quando você acessa um site, seu navegador usa o HTTP para pedir as páginas e receber as
+                respostas do servidor.</p>
 
-    <h3>HTTPS:</h3>
-    <p>É a versão segura do HTTP, que protege os dados com criptografia.</p>
+            <h3>Como o HTTP Funciona:</h3>
+            <p><strong>Cliente e Servidor:</strong> O navegador é o cliente e o servidor é o computador onde o site está
+                hospedado. O cliente pede algo (como uma página) e o servidor responde.</p>
 
-    <h3>Exemplo:</h3>
-    <p>Você digita <code>https://exemplo.com</code> no navegador.<br>
-    O navegador pede a página ao servidor.<br>
-    O servidor envia a página de volta.<br>
-    O navegador mostra a página para você.</p>
+            <div class="container">
+                <h3>Métodos HTTP:</h3>
+                <ul>
+                    <li><strong>GET:</strong> Pede para ver uma página.</li>
+                    <li><strong>POST:</strong> Envia informações para o servidor (como quando você preenche um formulário).
+                    </li>
+                    <li><strong>PUT:</strong> Atualiza informações.</li>
+                    <li><strong>DELETE:</strong> Apaga informações.</li>
+                </ul>
+            </div>
 
-    <h3>Por que o HTTP é importante?</h3>
-    <p>O HTTP é o que permite que você acesse sites na internet. Sem ele, os navegadores e servidores não conseguiriam se comunicar. É o que faz a web funcionar!</p>
+            <h3>URL:</h3>
+            <p>É o endereço de um site, como <code>https://exemplo.com</code>.</p>
+
+            <h3>Requisição HTTP:</h3>
+            <p>O navegador envia uma mensagem pedindo algo ao servidor.</p>
+            <ul>
+                <li><strong>Linha de requisição:</strong> Diz o que está sendo pedido.</li>
+                <li><strong>Cabeçalhos:</strong> São informações extras, como o tipo de conteúdo.</li>
+                <li><strong>Corpo da requisição:</strong> Se estiver enviando dados, eles vão aqui.</li>
+            </ul>
+
+            <h3>Resposta HTTP:</h3>
+            <p>O servidor responde ao navegador com:</p>
+            <ul>
+                <li><strong>Linha de status:</strong> Diz se deu certo ou não (como "200 OK" ou "404 Não Encontrado").
+                </li>
+                <li><strong>Cabeçalhos:</strong> Mais informações extras.</li>
+                <li><strong>Corpo da resposta:</strong> O que você pediu, como a página web.</li>
+            </ul>
+
+            <h3>HTTPS:</h3>
+            <p>É a versão segura do HTTP, que protege os dados com criptografia.</p>
+
+            <div class="container">
+                <h3>Exemplo:</h3>
+                <p>Você digita <strong><code>https://exemplo.com</code></strong> no navegador.<br>
+                    O navegador pede a página ao servidor.<br>
+                    O servidor envia a página de volta.<br>
+                    O navegador mostra a página para você.</p>
+            </div>
+
+            <h3>Por que o HTTP é importante?</h3>
+            <p>O HTTP é o que permite que você acesse sites na internet. Sem ele, os navegadores e servidores não
+                conseguiriam se comunicar. É o que faz a web funcionar!</p>
+        </div>
+    </main>
+
 </body>
+
 </html>
