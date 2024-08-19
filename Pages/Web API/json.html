@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação sobre JSON</title>
+
+    <link rel="stylesheet" href="../Styles/global.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Portfolio do Bootcamp Front-end</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Inicio</a>
+        <a href="fundamentos.html">Fundamentos</a>
+        <a href="webapi.html">Web API</a>
+        <a href="react.html">React</a>
+    </nav>
+
+    <main>
+        <div class="container">
+            <h1>Índice do Curso</h1>
+            <ul>
+                <li><a href="#container-html">Aula 1: HTML</a></li>
+                <li><a href="#container-css">Aula 2: CSS</a></li>
+                <li><a href="#container-javascript">Aula 2: JavaScript</a></li>
+            </ul>
+
+            <h1 class="title-body">JSON (JavaScript Object Notation)</h1>
+            <p>JSON é um formato de dados leve e fácil de ler e escrever, utilizado principalmente para transmitir dados
+                entre um servidor e uma aplicação web. Ele é baseado em texto, o que o torna fácil de entender tanto
+                para
+                humanos quanto para máquinas.</p>
+
+            <h2>Características do JSON:</h2>
+            <ul>
+                <li><strong>Leve:</strong> O JSON é um formato simples, o que o torna rápido de processar.</li>
+                <li><strong>Legível:</strong> Por ser baseado em texto, é fácil para humanos lerem e entenderem.</li>
+                <li><strong>Independente de Linguagem:</strong> Embora o JSON seja derivado do JavaScript, ele é
+                    amplamente
+                    utilizado em várias linguagens de programação, como Python, Java, PHP, entre outras.</li>
+            </ul>
+
+            <h2>Estrutura Básica do JSON:</h2>
+            <p>O JSON é composto de <strong>objetos</strong> e <strong>arrays</strong>:</p>
+
+            <h3>Objeto:</h3>
+            <p>É uma coleção de pares chave-valor, delimitada por <code>{}</code>.</p>
+            <ul>
+                <li><strong>Chave:</strong> Sempre uma string, que funciona como um identificador para o valor.</li>
+                <li><strong>Valor:</strong> Pode ser uma string, número, booleano (<code>true</code> ou
+                    <code>false</code>),
+                    nulo (<code>null</code>), outro objeto ou um array.
+                </li>
+            </ul>
+
+            <p><strong>Exemplo:</strong></p>
+            <div class="codigo">
+                <pre><code>{
+                    "nome": "Maria",
+                    "idade": 30,
+                    "casada": true
+                }</code></pre>
+            </div>
+
+            <h3>Array:</h3>
+            <p>É uma lista ordenada de valores, delimitada por <code>[]</code>.</p>
+            <p>Os valores em um array podem ser de qualquer tipo permitido no JSON (strings, números, objetos, arrays,
+                etc.).</p>
+
+            <p><strong>Exemplo:</strong></p>
+            <div class="codigo">
+                <pre><code>[
+                    "banana",
+                    "maçã",
+                    "laranja"
+                ]</code></pre>
+            </div>
+
+            <h2>Exemplo de JSON Completo:</h2>
+            <div class="codigo" style="width: 100%;">
+                <pre><code>{
+                    "nome": "João",
+                    "idade": 25,
+                    "habilidades": ["JavaScript", "Python", "HTML"],
+                    "endereco": {
+                        "rua": "Rua A",
+                        "numero": 123,
+                        "cidade": "São Paulo"
+                    },
+                    "casado": false
+                }</code></pre>
+            </div>
+
+            <h2>Como o JSON é Usado?</h2>
+            <ul>
+                <li><strong>Troca de Dados:</strong> JSON é frequentemente usado em APIs para enviar e receber dados
+                    entre
+                    um cliente (como um navegador web) e um servidor.</li>
+                <li><strong>Armazenamento de Dados:</strong> Pode ser usado para armazenar configurações ou dados
+                    estruturados em arquivos.</li>
+            </ul>
+
+            <h2>Vantagens do JSON:</h2>
+            <ul>
+                <li><strong>Facilidade de Uso:</strong> Simples de ler e escrever.</li>
+                <li><strong>Compatibilidade:</strong> Suportado por praticamente todas as linguagens de programação.
+                </li>
+                <li><strong>Versatilidade:</strong> Pode representar dados complexos (como objetos aninhados) de maneira
+                    clara e estruturada.</li>
+            </ul>
+        </div>
+
+        <div class="container">
+            <h1>Diferença entre Objetos e Arrays em JSON</h1>
+
+            <h2>Objetos `{}`</h2>
+            <p>
+                Um objeto JSON é uma coleção de pares chave-valor, onde cada chave é uma string e o valor pode ser
+                qualquer tipo de dado JSON.
+                Os pares chave-valor são separados por vírgulas, e cada chave é seguida por dois pontos antes do valor.
+            </p>
+
+            <h3>Exemplo</h3>
+            <div class="codigo" style="width: 100%;">
+                <pre><code>{
+                  "nome": "Ana",
+                  "idade": 28,
+                  "endereco": {
+                    "rua": "Rua das Flores",
+                    "numero": 123
+                  }
+                }</code></pre>
+            </div>
+
+            <h3>Uso Comum</h3>
+            <ul>
+                <li>Representar registros com propriedades, como uma pessoa, um produto, ou uma configuração.</li>
+                <li>Exemplos: detalhes de um usuário, configuração de um aplicativo, dados de um produto.</li>
+            </ul>
+
+            <h2>Arrays `[]`</h2>
+            <p>
+                Um array JSON é uma lista ordenada de valores. Os valores podem ser qualquer tipo JSON, incluindo
+                objetos e outros arrays.
+                Os valores dentro de um array são separados por vírgulas e não têm chaves.
+            </p>
+
+            <h3>Exemplo</h3>
+            <div class="codigo">
+                <pre><code>[
+                  "maçã",
+                  "banana",
+                  "laranja"
+                ]</code></pre>
+            </div>
+
+            <h3>Uso Comum</h3>
+            <ul>
+                <li>Listar múltiplos itens que pertencem a uma mesma categoria ou tipo.</li>
+                <li>Exemplos: uma lista de itens de um carrinho de compras, uma coleção de objetos de dados, resultados
+                    de uma consulta.</li>
+            </ul>
+
+            <h2>Objetos Dentro de Arrays</h2>
+            <p>
+                Você também pode ter objetos dentro de arrays para representar coleções de registros com estrutura:
+            </p>
+
+            <h3>Exemplo</h3>
+            <div class="codigo">
+                <pre><code>[
+                  {
+                    "nome": "Carlos",
+                    "idade": 32
+                  },
+                  {
+                    "nome": "Juliana",
+                    "idade": 29
+                  }
+                ]</code></pre>
+            </div>
+
+            <h2>Arrays Dentro de Objetos</h2>
+            <p>
+                Da mesma forma, você pode ter arrays dentro de objetos:
+            </p>
+
+            <h3>Exemplo</h3>
+            <div class="codigo">
+                <pre><code>{
+                  "nome": "Ana",
+                  "interesses": ["leitura", "esportes", "viagens"]
+                }</code></pre>
+            </div>
+
+            <h2>Resumo</h2>
+            <ul>
+                <li><strong>Objetos `{}`</strong>: São melhores para representar dados estruturados e complexos, com
+                    pares chave-valor, onde você pode identificar claramente cada propriedade ou atributo.</li>
+                <li><strong>Arrays `[]`</strong>: São melhores para representar listas ou coleções de itens, onde a
+                    ordem dos itens pode ser importante e não há necessidade de identificar cada item com uma chave.
+                </li>
+            </ul>
+            <p>
+                Ambos são fundamentais para a representação e troca de dados em JSON, e entender como e quando usar cada
+                um é crucial para a modelagem de dados eficaz.
+            </p>
+        </div>
+    </main>
+</body>
+
+</html>

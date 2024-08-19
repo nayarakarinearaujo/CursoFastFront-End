@@ -73,3 +73,6 @@ Quando você acessa uma página, o navegador usa GET para pedir a página ao ser
 Se você envia um formulário, ele pode usar POST para enviar as informações.
 Se você edita ou deleta algo, pode usar PUT, PATCH, ou DELETE para fazer as mudanças.
 Esses métodos ajudam a organizar e controlar a comunicação entre seu navegador e os servidores da web.
+
+fazer exercicio:
+https://jsononline.net/pt/json-validator
