@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explicação sobre JSON</title>
-
     <link rel="stylesheet" href="../Styles/global.css">
 </head>
 
@@ -26,16 +25,25 @@
         <div class="container">
             <h1>Índice do Curso</h1>
             <ul>
-                <li><a href="#container-html">Aula 1: HTML</a></li>
-                <li><a href="#container-css">Aula 2: CSS</a></li>
-                <li><a href="#container-javascript">Aula 2: JavaScript</a></li>
+                <li><a href="#container-html">Aula 1: JSON (JavaScript Object Notation)</a></li>
+                <li><a href="#container-css">Aula 2: Características do JSON:</a></li>
+                <li><a href="#container-javascript">Aula 3: Diferença entre Objetos e Arrays em JSON</a></li>
+                <li><a href="#container-historia">Aula 4: História e Evolução do JSON</a></li>
+                <li><a href="#container-processamento">Aula 5: Como JSON é Processado</a></li>
+                <li><a href="#container-validacao">Aula 6: Validação e Formatação de JSON</a></li>
+                <li><a href="#container-comparacao">Aula 7: Comparação com Outros Formatos de Dados</a></li>
+                <li><a href="#container-seguranca">Aula 8: Segurança e Boas Práticas</a></li>
+                <li><a href="#container-api">Aula 9: JSON e APIs</a></li>
+                <li><a href="#container-javascript-manipulacao">Aula 10: Manipulação de JSON em JavaScript</a></li>
+                <li><a href="#container-referencias">Aula 11: Referências e Recursos Adicionais</a></li>
             </ul>
+        </div>
 
+        <div class="container" id="container-html">
             <h1 class="title-body">JSON (JavaScript Object Notation)</h1>
             <p>JSON é um formato de dados leve e fácil de ler e escrever, utilizado principalmente para transmitir dados
                 entre um servidor e uma aplicação web. Ele é baseado em texto, o que o torna fácil de entender tanto
-                para
-                humanos quanto para máquinas.</p>
+                para humanos quanto para máquinas.</p>
 
             <h2>Características do JSON:</h2>
             <ul>
@@ -109,14 +117,13 @@
             <h2>Vantagens do JSON:</h2>
             <ul>
                 <li><strong>Facilidade de Uso:</strong> Simples de ler e escrever.</li>
-                <li><strong>Compatibilidade:</strong> Suportado por praticamente todas as linguagens de programação.
-                </li>
+                <li><strong>Compatibilidade:</strong> Suportado por praticamente todas as linguagens de programação.</li>
                 <li><strong>Versatilidade:</strong> Pode representar dados complexos (como objetos aninhados) de maneira
                     clara e estruturada.</li>
             </ul>
         </div>
 
-        <div class="container">
+        <div class="container" id="container-javascript">
             <h1>Diferença entre Objetos e Arrays em JSON</h1>
 
             <h2>Objetos `{}`</h2>
@@ -192,27 +199,193 @@
             </p>
 
             <h3>Exemplo</h3>
-            <div class="codigo">
+            <div class="codigo" style="width: 100%;">
                 <pre><code>{
                   "nome": "Ana",
-                  "interesses": ["leitura", "esportes", "viagens"]
+                  "interesses": [
+                    "programação",
+                    "música",
+                    "viagens"
+                  ]
                 }</code></pre>
             </div>
-
-            <h2>Resumo</h2>
-            <ul>
-                <li><strong>Objetos `{}`</strong>: São melhores para representar dados estruturados e complexos, com
-                    pares chave-valor, onde você pode identificar claramente cada propriedade ou atributo.</li>
-                <li><strong>Arrays `[]`</strong>: São melhores para representar listas ou coleções de itens, onde a
-                    ordem dos itens pode ser importante e não há necessidade de identificar cada item com uma chave.
-                </li>
-            </ul>
-            <p>
-                Ambos são fundamentais para a representação e troca de dados em JSON, e entender como e quando usar cada
-                um é crucial para a modelagem de dados eficaz.
-            </p>
         </div>
+
+        <div class="container" id="container-historia">
+            <h1>História e Evolução do JSON</h1>
+            <p>JSON (JavaScript Object Notation) foi criado por Douglas Crockford na década de 2000 como um formato
+                simples para troca de dados. A ideia era fornecer um formato mais leve e fácil de usar do que o XML,
+                que era o padrão na época. JSON rapidamente se tornou popular devido à sua simplicidade e eficiência.</p>
+
+            <h2>Marco Histórico</h2>
+            <ul>
+                <li><strong>2001:</strong> Douglas Crockford publica o JSON como uma alternativa ao XML.</li>
+                <li><strong>2006:</strong> JSON ganha popularidade com o crescimento das APIs RESTful.</li>
+                <li><strong>2013:</strong> JSON é oficialmente adotado como um formato padrão pelo ECMA-404.</li>
+            </ul>
+
+            <h2>Impacto</h2>
+            <p>JSON revolucionou a troca de dados na web, tornando a comunicação entre clientes e servidores mais
+                eficiente e fácil de gerenciar. Hoje, é amplamente suportado e utilizado em uma variedade de
+                aplicativos e serviços.</p>
+        </div>
+
+        <div class="container" id="container-processamento">
+            <h1>Como JSON é Processado</h1>
+            <p>JSON é processado de forma eficiente pelos navegadores e servidores devido à sua simplicidade. Aqui estão
+                algumas informações sobre como JSON é manipulado:</p>
+
+            <h2>Processamento no Navegador</h2>
+            <p>Quando um navegador recebe dados JSON, ele pode processá-los diretamente usando JavaScript:</p>
+
+            <h3>Exemplo de Leitura</h3>
+            <div class="codigo">
+                <pre><code>fetch('dados.json')
+                .then(response => response.json())
+                .then(data => console.log(data));</code></pre>
+            </div>
+
+            <h2>Processamento no Servidor</h2>
+            <p>Os servidores também podem manipular JSON facilmente. A maioria das linguagens de programação tem bibliotecas
+                ou módulos para parsing e geração de JSON.</p>
+
+            <h3>Exemplo em Node.js</h3>
+            <div class="codigo">
+                <pre><code>const fs = require('fs');
+                const dados = JSON.parse(fs.readFileSync('dados.json', 'utf8'));
+                console.log(dados);</code></pre>
+            </div>
+        </div>
+
+        <div class="container" id="container-validacao">
+            <h1>Validação e Formatação de JSON</h1>
+            <p>Validar e formatar JSON é importante para garantir que os dados sejam bem estruturados e sem erros.</p>
+
+            <h2>Validação de JSON</h2>
+            <p>Validação garante que o JSON esteja no formato correto e seja legível por máquinas:</p>
+
+            <h3>Ferramentas Online</h3>
+            <ul>
+                <li><a href="https://jsonlint.com/" target="_blank">JSONLint</a> - Valida e formata JSON.</li>
+                <li><a href="https://jsonformatter.curiousconcept.com/" target="_blank">JSON Formatter & Validator</a> - Ferramenta para formatar e validar JSON.</li>
+            </ul>
+
+            <h2>Formatação de JSON</h2>
+            <p>Manter JSON formatado corretamente melhora a legibilidade:</p>
+
+            <h3>Exemplo de Formatação</h3>
+            <div class="codigo">
+                <pre><code>{
+                  "nome": "Lucas",
+                  "idade": 26,
+                  "cidade": "Rio de Janeiro"
+                }</code></pre>
+            </div>
+        </div>
+
+        <div class="container" id="container-comparacao">
+            <h1>Comparação com Outros Formatos de Dados</h1>
+            <p>JSON é frequentemente comparado com XML e YAML:</p>
+
+            <h2>JSON vs XML</h2>
+            <ul>
+                <li><strong>Simplicidade:</strong> JSON é mais simples e menos verboso do que XML.</li>
+                <li><strong>Desempenho:</strong> JSON tende a ser mais eficiente em termos de desempenho devido ao seu tamanho menor.</li>
+                <li><strong>Legibilidade:</strong> JSON é geralmente mais legível para humanos do que XML.</li>
+            </ul>
+
+            <h2>JSON vs YAML</h2>
+            <ul>
+                <li><strong>Legibilidade:</strong> YAML pode ser mais legível devido à sua sintaxe menos estruturada.</li>
+                <li><strong>Complexidade:</strong> YAML pode ser mais complexo e difícil de analisar em comparação com JSON.</li>
+                <li><strong>Uso:</strong> JSON é mais comum em APIs e aplicações web, enquanto YAML é frequentemente usado em arquivos de configuração.</li>
+            </ul>
+        </div>
+
+        <div class="container" id="container-seguranca">
+            <h1>Segurança e Boas Práticas</h1>
+            <p>Quando trabalhar com JSON, é importante seguir boas práticas para garantir a segurança e integridade dos
+                dados.</p>
+
+            <h2>Segurança</h2>
+            <p>Evite problemas de segurança como injeções de JSON:</p>
+
+            <h3>Evitar Injeções</h3>
+            <ul>
+                <li>Sanitize input to prevent malicious data from compromising your application.</li>
+                <li>Utilize bibliotecas e ferramentas confiáveis para parsear e manipular JSON.</li>
+            </ul>
+
+            <h2>Boas Práticas</h2>
+            <ul>
+                <li>Valide e formate o JSON para evitar erros.</li>
+                <li>Use nomes claros e descritivos para as chaves.</li>
+                <li>Documente o esquema JSON se estiver trabalhando em uma API pública.</li>
+            </ul>
+        </div>
+
+        <div class="container" id="container-api">
+            <h1>JSON e APIs</h1>
+            <p>JSON é amplamente utilizado em APIs para trocar dados entre cliente e servidor.</p>
+
+            <h2>Exemplo de Requisição API</h2>
+            <p>Um cliente pode enviar uma requisição para uma API e receber uma resposta em JSON:</p>
+
+            <h3>Exemplo com Fetch API</h3>
+            <div class="codigo">
+                <pre><code>fetch('https://api.exemplo.com/dados')
+                .then(response => response.json())
+                .then(data => console.log(data));</code></pre>
+            </div>
+
+            <h2>Documentação de API</h2>
+            <p>Quando documentar uma API, inclua exemplos de JSON para facilitar o entendimento dos desenvolvedores.</p>
+        </div>
+
+        <div class="container" id="container-javascript-manipulacao">
+            <h1>Manipulação de JSON em JavaScript</h1>
+            <p>JavaScript oferece métodos nativos para trabalhar com JSON.</p>
+
+            <h2>JSON.parse()</h2>
+            <p>Converte uma string JSON em um objeto JavaScript:</p>
+            <div class="codigo">
+                <pre><code>const jsonString = '{"nome": "Pedro", "idade": 35}';
+                const objeto = JSON.parse(jsonString);
+                console.log(objeto.nome); // Pedro</code></pre>
+            </div>
+
+            <h2>JSON.stringify()</h2>
+            <p>Converte um objeto JavaScript em uma string JSON:</p>
+            <div class="codigo">
+                <pre><code>const objeto = { nome: "Lucas", idade: 28 };
+                const jsonString = JSON.stringify(objeto);
+                console.log(jsonString); // {"nome":"Lucas","idade":28}</code></pre>
+            </div>
+        </div>
+
+        <div class="container" id="container-referencias">
+            <h1>Referências e Recursos Adicionais</h1>
+            <p>Aqui estão alguns recursos úteis para aprender mais sobre JSON:</p>
+
+            <h2>Documentação Oficial</h2>
+            <ul>
+                <li><a href="https://www.json.org/json-en.html" target="_blank">JSON.org</a></li>
+                <li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON" target="_blank">MDN Web Docs - JSON</a></li>
+            </ul>
+
+            <h2>Livros e Cursos</h2>
+            <ul>
+                <li><a href="https://www.amazon.com.br/JavaScript-Patterns-Stoyan-Stefanov/dp/0596806752" target="_blank">JavaScript Patterns - Stoyan Stefanov</a></li>
+                <li><a href="https://www.udemy.com/topic/json/" target="_blank">Cursos sobre JSON na Udemy</a></li>
+            </ul>
+        </div>
+
     </main>
+
+    <footer>
+        <p>&copy; 2024 Nayara Karine. Todos os direitos reservados.</p>
+    </footer>
+
 </body>
 
 </html>

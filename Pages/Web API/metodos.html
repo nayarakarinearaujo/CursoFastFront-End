@@ -5,95 +5,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Métodos de Requisição HTTP</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-
-        h2 {
-            color: #2c3e50;
-        }
-
-        p,
-        li {
-            margin: 10px 0;
-        }
-
-        ul {
-            list-style-type: square;
-            margin-left: 20px;
-        }
-
-        code {
-            background-color: #f4f4f4;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-
-        .method-title {
-            font-weight: bold;
-            color: #2c3e50;
-        }
-    </style>
+    <link rel="stylesheet" href="../Styles/global.css">
 </head>
 
 <body>
-    <h2>Métodos de Requisição HTTP</h2>
-    <p>Métodos de requisição HTTP são as maneiras que o navegador usa para pedir ou enviar dados a um servidor na
-        internet. Cada método tem uma função específica. Aqui estão os principais:</p>
 
-    <h3>1. <span class="method-title">GET</span></h3>
-    <p><strong>O que faz:</strong> Pede dados do servidor, como quando você abre uma página web.</p>
-    <p><strong>Exemplo:</strong> Quando você digita um endereço de site no navegador, ele faz uma requisição GET para
-        obter a página.</p>
+    <header>
+        <h1>Portfolio do Bootcamp Front-end</h1>
+    </header>
 
-    <h3>2. <span class="method-title">POST</span></h3>
-    <p><strong>O que faz:</strong> Envia dados para o servidor. Usado para enviar informações que precisam ser
-        processadas, como ao preencher e enviar um formulário.</p>
-    <p><strong>Exemplo:</strong> Quando você se cadastra em um site, o formulário de cadastro envia seus dados com uma
-        requisição POST.</p>
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="fundamentos.html">Fundamentos</a>
+        <a href="webapi.html">Web API</a>
+        <a href="react.html">React</a>
+    </nav>
 
-    <h3>3. <span class="method-title">PUT</span></h3>
-    <p><strong>O que faz:</strong> Atualiza ou substitui dados no servidor.</p>
-    <p><strong>Exemplo:</strong> Se você está editando seu perfil em um site, a requisição PUT pode ser usada para
-        enviar as novas informações.</p>
+    <main>
 
-    <h3>4. <span class="method-title">DELETE</span></h3>
-    <p><strong>O que faz:</strong> Remove dados do servidor.</p>
-    <p><strong>Exemplo:</strong> Se você decide excluir sua conta em um site, uma requisição DELETE pode ser usada para
-        apagar seus dados.</p>
+        <div class="container">
+            <h1>Índice do Curso</h1>
+            <ul>
+                <li><a href="#introducao">Introdução aos Métodos de Requisição HTTP</a></li>
+                <li><a href="#get">1. GET</a></li>
+                <li><a href="#post">2. POST</a></li>
+                <li><a href="#put">3. PUT</a></li>
+                <li><a href="#delete">4. DELETE</a></li>
+                <li><a href="#patch">5. PATCH</a></li>
+                <li><a href="#head">6. HEAD</a></li>
+                <li><a href="#options">7. OPTIONS</a></li>
+                <li><a href="#trace">8. TRACE</a></li>
+                <li><a href="#diferenca-idempotentes">Diferença entre Métodos Idempotentes e Não Idempotentes</a></li>
+                <li><a href="#status-codes">Códigos de Status HTTP Comuns</a></li>
+                <li><a href="#seguranca">Segurança e Autenticação</a></li>
+                <li><a href="#boas-praticas">Boas Práticas para o Uso de Métodos HTTP</a></li>
+                <li><a href="#uso-pratico">Como Funcionam na Prática</a></li>
+                <li><a href="#post-vs-put">Quando Usar POST ou PUT</a></li>
+            </ul>
+        </div>
 
-    <h3>5. <span class="method-title">PATCH</span></h3>
-    <p><strong>O que faz:</strong> Aplica pequenas mudanças a dados existentes no servidor, sem substituir tudo.</p>
-    <p><strong>Exemplo:</strong> Se você só quer mudar seu e-mail no perfil, uma requisição PATCH pode alterar apenas
-        essa informação.</p>
+        <div class="container">
+            <h2 id="introducao">Introdução aos Métodos de Requisição HTTP</h2>
+            <p>Métodos de requisição HTTP são as maneiras que o navegador usa para pedir ou enviar dados a um servidor na internet. Cada método tem uma função específica e é importante entender como e quando usá-los.</p>
 
-    <h3>6. <span class="method-title">HEAD</span></h3>
-    <p><strong>O que faz:</strong> Pede só o cabeçalho de uma resposta, sem o conteúdo completo.</p>
-    <p><strong>Exemplo:</strong> Usado para verificar se uma página existe sem baixar todo o conteúdo dela.</p>
+            <h2 id="get">GET</h2>
+            <p><strong>O que faz:</strong> Pede dados do servidor, como quando você abre uma página web.</p>
+            <p><strong>Exemplo:</strong> Quando você digita um endereço de site no navegador, ele faz uma requisição GET para obter a página.</p>
 
-    <h3>Como funcionam na prática:</h3>
-    <p>Quando você acessa uma página, o navegador usa <strong>GET</strong> para pedir a página ao servidor.</p>
-    <p>Se você envia um formulário, ele pode usar <strong>POST</strong> para enviar as informações.</p>
-    <p>Se você edita ou deleta algo, pode usar <strong>PUT</strong>, <strong>PATCH</strong>, ou <strong>DELETE</strong>
-        para fazer as mudanças.</p>
-    <p>Esses métodos ajudam a organizar e controlar a comunicação entre seu navegador e os servidores da web.</p>
+            <h2 id="post">POST</h2>
+            <p><strong>O que faz:</strong> Envia dados para o servidor. Usado para enviar informações que precisam ser processadas, como ao preencher e enviar um formulário.</p>
+            <p><strong>Exemplo:</strong> Quando você se cadastra em um site, o formulário de cadastro envia seus dados com uma requisição POST.</p>
 
-    <hr>
-    <h2>Quando usar POST ou PUT</h2>
-    <p><strong>Quando usar POST:</strong> Use POST quando você quer criar um novo usuário, mas não sabe exatamente onde ele será colocado no sistema. O servidor decide isso para você.</p>
-    <p><strong>Exemplo:</strong> Imagine que você está preenchendo um formulário de cadastro em um site. Quando você clica em "Cadastrar", o site usa POST para criar sua conta em algum lugar que ele decide.</p>
-    
-    <h3>Quando usar PUT</h3>
-    <p><strong>Quando usar:</strong> Use PUT se você já sabe onde o usuário vai ser colocado, como um ID específico. Você quer garantir que o usuário seja criado ou atualizado nesse lugar específico.</p>
-    <p><strong>Exemplo:</strong> Se o sistema já tem um espaço reservado para o usuário com o ID 123, e você quer garantir que as informações desse usuário sejam criadas ou atualizadas exatamente nesse lugar.</p>
-    
-    <h3>Resumindo:</h3>
-    <p><strong>POST</strong> é para quando você só quer criar um novo usuário e deixa o sistema decidir onde colocar.</p>
-    <p><strong>PUT</strong> é para quando você sabe exatamente onde o usuário deve estar e quer garantir que ele seja criado ou atualizado lá.</p>
-    
+            <h2 id="put">PUT</h2>
+            <p><strong>O que faz:</strong> Atualiza ou substitui dados no servidor.</p>
+            <p><strong>Exemplo:</strong> Se você está editando seu perfil em um site, a requisição PUT pode ser usada para enviar as novas informações.</p>
+
+            <h2 id="delete">DELETE</h2>
+            <p><strong>O que faz:</strong> Remove dados do servidor.</p>
+            <p><strong>Exemplo:</strong> Se você decide excluir sua conta em um site, uma requisição DELETE pode ser usada para apagar seus dados.</p>
+
+            <h2 id="patch">PATCH</h2>
+            <p><strong>O que faz:</strong> Aplica pequenas mudanças a dados existentes no servidor, sem substituir tudo.</p>
+            <p><strong>Exemplo:</strong> Se você só quer mudar seu e-mail no perfil, uma requisição PATCH pode alterar apenas essa informação.</p>
+
+            <h2 id="head">HEAD</h2>
+            <p><strong>O que faz:</strong> Pede só o cabeçalho de uma resposta, sem o conteúdo completo.</p>
+            <p><strong>Exemplo:</strong> Usado para verificar se uma página existe sem baixar todo o conteúdo dela.</p>
+
+            <h2 id="options">OPTIONS</h2>
+            <p><strong>O que faz:</strong> Descreve as opções de comunicação para o recurso de destino.</p>
+            <p><strong>Exemplo:</strong> Usado para obter as opções de suporte para um recurso específico.</p>
+
+            <h2 id="trace">TRACE</h2>
+            <p><strong>O que faz:</strong> Realiza um loop-back de teste ao longo da rota para o recurso de destino.</p>
+            <p><strong>Exemplo:</strong> Usado para diagnosticar problemas de rede e verificar como uma requisição é manipulada.</p>
+
+            <h2 id="diferenca-idempotentes">Diferença entre Métodos Idempotentes e Não Idempotentes</h2>
+            <p>Métodos idempotentes são aqueles que podem ser chamados múltiplas vezes sem alterar o resultado além da primeira chamada, como GET e PUT. Métodos não idempotentes, como POST, podem ter efeitos diferentes a cada chamada.</p>
+
+            <h2 id="status-codes">Códigos de Status HTTP Comuns</h2>
+            <ul>
+                <li>200 OK - A requisição foi bem-sucedida.</li>
+                <li>201 Created - A requisição foi bem-sucedida e um novo recurso foi criado.</li>
+                <li>204 No Content - A requisição foi bem-sucedida, mas não há conteúdo a retornar.</li>
+                <li>400 Bad Request - A requisição não pôde ser entendida pelo servidor.</li>
+                <li>401 Unauthorized - A requisição requer autenticação.</li>
+                <li>404 Not Found - O recurso solicitado não foi encontrado.</li>
+                <li>500 Internal Server Error - O servidor encontrou um erro inesperado.</li>
+            </ul>
+
+            <h2 id="seguranca">Segurança e Autenticação</h2>
+            <p>Métodos de requisição HTTP interagem com práticas de segurança e autenticação, como CORS (Cross-Origin Resource Sharing), OAuth (Open Authorization), e JWT (JSON Web Token), para proteger dados e garantir acesso apropriado.</p>
+
+            <h2 id="boas-praticas">Boas Práticas para o Uso de Métodos HTTP</h2>
+            <ul>
+                <li>Use o método apropriado para a operação desejada (GET para leitura, POST para criação, PUT/PATCH para atualização, DELETE para remoção).</li>
+                <li>Mantenha a segurança ao utilizar métodos como POST e PUT para evitar vulnerabilidades.</li>
+                <li>Documente claramente a API e os métodos suportados.</li>
+            </ul>
+
+            <h2 id="uso-pratico">Como Funcionam na Prática</h2>
+            <p>Quando você acessa uma página, o navegador usa <strong>GET</strong> para pedir a página ao servidor.</p>
+            <p>Se você envia um formulário, ele pode usar <strong>POST</strong> para enviar as informações.</p>
+            <p>Se você edita ou deleta algo, pode usar <strong>PUT</strong>, <strong>PATCH</strong>, ou <strong>DELETE</strong> para fazer as mudanças.</p>
+            <p>Esses métodos ajudam a organizar e controlar a comunicação entre seu navegador e os servidores da web.</p>
+
+        </div>
+            <div class="container">
+                <h2 id="post-vs-put">Quando Usar POST ou PUT</h2>
+                <p><strong>Quando usar POST:</strong> Use POST quando você quer criar um novo usuário, mas não sabe exatamente onde ele será colocado no sistema. O servidor decide isso para você.</p>
+                <p><strong>Exemplo:</strong> Imagine que você está preenchendo um formulário de cadastro em um site. Quando você clica em "Cadastrar", o site usa POST para criar sua conta em algum lugar que ele decide.</p>
+                <h3>Quando usar PUT</h3>
+                <p><strong>Quando usar:</strong> Use PUT se você já sabe onde o usuário vai ser colocado, como um ID específico. Você quer garantir que o usuário seja criado ou atualizado nesse lugar específico.</p>
+                <p><strong>Exemplo:</strong> Se o sistema já tem um espaço reservado para o usuário com o ID 123, e você quer garantir que as informações desse usuário sejam criadas ou atualizadas exatamente nesse lugar.</p>
+                <h3>Resumindo:</h3>
+                <p><strong>POST</strong> é para quando você só quer criar um novo usuário e deixa o sistema decidir onde colocar.</p>
+                <p><strong>PUT</strong> é para quando você sabe exatamente onde o usuário deve estar e quer garantir que ele seja criado ou atualizado lá.</p>
+            </div>
+         
+    </main>
 
 </body>
 
