@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é o React e JSX?</title>
+    <link rel="stylesheet" href="../Styles/global.css">
+    
+</head>
+
+<body>
+
+    <header>
+        <h1>Portfolio do Bootcamp Front-end</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="fundamentos.html">Fundamentos</a>
+        <a href="webapi.html">Web API</a>
+        <a href="react.html">React</a>
+    </nav>
+
+    <main>
+
+        <div class="container">
+            <h1>O que é o React?</h1>
+            <p>React é uma biblioteca JavaScript para construir interfaces de usuário, especialmente para aplicações de
+                página única (Single Page Applications). Desenvolvido pelo Facebook, React permite criar componentes
+                reutilizáveis e gerenciar o estado da aplicação de maneira eficiente.</p>
+
+            <h2>Principais características do React:</h2>
+            <ul>
+                <li><strong>Componentes Reutilizáveis:</strong> O React organiza a UI em componentes independentes e
+                    reutilizáveis que podem ser combinados para criar interfaces complexas.</li>
+                <li><strong>Virtual DOM:</strong> React usa um Virtual DOM para otimizar atualizações na interface do
+                    usuário. Quando o estado da aplicação muda, o React compara o Virtual DOM com o DOM real e aplica as
+                    mudanças necessárias de maneira eficiente.</li>
+                <li><strong>Estado e Props:</strong> Componentes React podem manter um estado interno e também receber
+                    dados através de propriedades (props) passadas pelos componentes pai.</li>
+                <li><strong>Declarativo:</strong> React é declarativo, o que significa que você descreve o que a
+                    interface deve parecer com base no estado atual, e o React cuida de atualizar a UI quando o estado
+                    muda.</li>
+            </ul>
+
+            <h1>O que é JSX?</h1>
+            <p>JSX (JavaScript XML) é uma sintaxe que permite escrever código que se parece com HTML dentro do
+                JavaScript. É uma extensão de sintaxe para JavaScript que torna mais fácil criar e entender a estrutura
+                da UI. JSX é usado pelo React para definir o layout e a aparência dos componentes de forma declarativa.
+            </p>
+
+            <h2>Principais características do JSX:</h2>
+            <ul>
+                <li><strong>Sintaxe Similar ao HTML:</strong> JSX permite que você escreva estruturas que se parecem com
+                    HTML, mas dentro de arquivos JavaScript. Isso torna a definição da UI mais intuitiva.</li>
+                <li><strong>Expressivo e Declarativo:</strong> Com JSX, você pode expressar a estrutura da interface de
+                    forma mais clara e direta. Ele é mais fácil de ler e escrever em comparação com a manipulação do DOM
+                    diretamente.</li>
+                <li><strong>Transformado pelo Babel:</strong> JSX não é compreendido pelos navegadores diretamente. O
+                    Babel, um transpilador JavaScript, converte o JSX em código JavaScript puro antes de ser executado
+                    no navegador.</li>
+            </ul>
+
+            <h2>Exemplo de JSX:</h2>
+            <div class="codigo" style="width: 80%;">
+                <pre><code>
+                import React from 'react';
+                
+                function MeuComponente() {
+                  return (
+                    &lt;div&gt;
+                      &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+                      &lt;p&gt;Este é um exemplo de JSX.&lt;/p&gt;
+                    &lt;/div&gt;
+                  );
+                }
+                
+                export default MeuComponente;
+                        </code></pre>
+            </div>
+
+            <h2>Por que Usar JSX?</h2>
+            <ul>
+                <li><strong>Facilidade de Leitura:</strong> JSX combina o poder do JavaScript com uma sintaxe familiar
+                    para desenvolvedores web, tornando o código mais legível e fácil de entender.</li>
+                <li><strong>Menos Código:</strong> JSX permite escrever menos código do que a abordagem tradicional de
+                    criar elementos React, que pode ser mais verbosa.</li>
+                <li><strong>IntelliSense e Autocompletar:</strong> Ferramentas de desenvolvimento podem fornecer melhor
+                    suporte para JSX, como autocompletar e validação, melhorando a produtividade.</li>
+            </ul>
+
+            <p>JSX é uma ferramenta poderosa para criar componentes React de forma expressiva e eficiente. Com ele, você
+                pode escrever a lógica e o layout do seu componente em um só lugar, facilitando a criação e manutenção
+                de interfaces de usuário.</p>
+        </div>
+    </main>
+</body>
+
+</html>
