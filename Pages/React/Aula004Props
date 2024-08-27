@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entendendo Props em React</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Entendendo Props em React</h1>
+
+    <p>Props são um conceito fundamental no React que permite passar dados e funções para os componentes. A ideia é que você pode reutilizar um componente e personalizá-lo conforme necessário usando propriedades, ou props, que são fornecidas pelo componente pai.</p>
+
+    <h2>O que são Props?</h2>
+    <ul>
+        <li>Props (abreviação de "properties") são um mecanismo para passar dados de um componente pai para um componente filho em React.</li>
+        <li>Elas são imutáveis dentro do componente que as recebe, ou seja, o componente filho não deve modificar as props que recebe.</li>
+        <li>Props permitem a reutilização de componentes com diferentes dados.</li>
+    </ul>
+
+    <h2>Como Utilizar Props</h2>
+
+    <h3>1. Passando Props para um Componente</h3>
+    <p>Você pode passar props para um componente ao usá-lo em JSX. Veja um exemplo básico:</p>
+    <pre><code>
+        // Componente Filho
+        function Greeting(props) {
+          return &lt;h1&gt;Hello, {props.name}!&lt;/h1&gt;;
+        }
+
+        // Componente Pai
+        function App() {
+          return &lt;Greeting name="Nayara" /&gt;;
+        }
+    </code></pre>
+    <p>Neste exemplo, o componente <code>Greeting</code> recebe uma prop chamada <code>name</code> que é usada para exibir uma mensagem personalizada.</p>
+
+    <h3>2. Definindo Props no Componente Filho</h3>
+    <p>Dentro do componente filho, você acessa as props diretamente via o objeto <code>props</code>. Também é possível usar a desestruturação para tornar o código mais limpo:</p>
+    <pre><code>
+        function Greeting({ name }) {
+          return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;
+        }
+    </code></pre>
+
+    <h3>3. Props e Tipagem</h3>
+    <p>Se estiver usando TypeScript, você pode definir tipos para suas props para garantir que os dados passados sejam do tipo esperado:</p>
+    <pre><code>
+        interface GreetingProps {
+          name: string;
+        }
+
+        function Greeting({ name }: GreetingProps) {
+          return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;
+        }
+    </code></pre>
+
+    <h3>4. Default Props</h3>
+    <p>Você pode definir valores padrão para as props usando a propriedade <code>defaultProps</code> ou inicializando valores nas props:</p>
+    <pre><code>
+        // Usando defaultProps
+        function Greeting({ name }) {
+          return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;
+        }
+
+        Greeting.defaultProps = {
+          name: 'Guest',
+        };
+
+        // Inicializando valores
+        function Greeting({ name = 'Guest' }) {
+          return &lt;h1&gt;Hello, {name}!&lt;/h1&gt;;
+        }
+    </code></pre>
+
+    <h3>5. Funções como Props</h3>
+    <p>Você também pode passar funções como props para permitir que o componente filho comunique eventos de volta ao componente pai:</p>
+    <pre><code>
+        // Componente Filho
+        function Button({ onClick }) {
+          return &lt;button onClick={onClick}&gt;Click me&lt;/button&gt;;
+        }
+
+        // Componente Pai
+        function App() {
+          const handleClick = () => {
+            alert('Button clicked!');
+          };
+
+          return &lt;Button onClick={handleClick} /&gt;;
+        }
+    </code></pre>
+
+    <h2>Exemplo Completo</h2>
+    <p>Aqui está um exemplo mais completo que usa props para personalizar a aparência e comportamento de um componente:</p>
+    <pre><code>
+        import React from 'react';
+
+        // Componente Card que usa props para exibir um título, uma imagem e um texto
+        function Card({ title, image, text }) {
+          return (
+            &lt;div className="card"&gt;
+              &lt;img src={image} alt={title} className="card-image" /&gt;
+              &lt;h2 className="card-title"&gt;{title}&lt;/h2&gt;
+              &lt;p className="card-text"&gt;{text}&lt;/p&gt;
+            &lt;/div&gt;
+          );
+        }
+
+        // Componente App que passa dados para o componente Card
+        function App() {
+          return (
+            &lt;div&gt;
+              &lt;Card
+                title="Beautiful Landscape"
+                image="https://example.com/landscape.jpg"
+                text="This is a beautiful landscape picture."
+              /&gt;
+              &lt;Card
+                title="City Skyline"
+                image="https://example.com/city.jpg"
+                text="The city skyline is stunning at night."
+              /&gt;
+            &lt;/div&gt;
+          );
+        }
+
+        export default App;
+    </code></pre>
+    <p>Neste exemplo, o componente <code>Card</code> é reutilizado com diferentes dados fornecidos pelas props <code>title</code>, <code>image</code>, e <code>text</code>. O componente <code>App</code> usa o <code>Card</code> para exibir diferentes cartões com base nas props passadas.</p>
+
+    <h2>Resumo</h2>
+    <ul>
+        <li>Props são uma maneira de passar dados e funções para componentes filhos em React.</li>
+        <li>Props são imutáveis dentro do componente filho.</li>
+        <li>Você pode usar props para criar componentes reutilizáveis e dinâmicos.</li>
+        <li>Props podem incluir dados simples, funções, e até componentes inteiros.</li>
+        <li>Em TypeScript, você pode tipar suas props para maior segurança e clareza.</li>
+    </ul>
+</body>
+</html>

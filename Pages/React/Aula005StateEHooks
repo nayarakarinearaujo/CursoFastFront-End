@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React State e Hooks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        code {
+            background: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+
+        .code-container {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>React State e Hooks</h1>
+    <p>No React, state e hooks são conceitos fundamentais para gerenciar o estado e os efeitos colaterais dos
+        componentes. Vamos explorar cada um deles em detalhes:</p>
+
+    <h2>O que é State?</h2>
+    <p>State é um conceito fundamental no React que permite que você armazene e gerencie dados que podem mudar ao longo
+        do tempo dentro de um componente. Diferente das props, que são passadas para um componente, o state é gerenciado
+        internamente pelo componente.</p>
+
+    <h2>Como Usar o State</h2>
+    <h3>Inicializando o State</h3>
+    <p>Para usar o state em um componente funcional, você deve usar o Hook <code>useState</code>. Aqui está um exemplo
+        básico:</p>
+
+    <div class="code-container">
+        <pre><code>import React, { useState } from 'react';
+
+function Counter() {
+  // Declara uma variável de estado chamada "count", com o valor inicial de 0.
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>You clicked {count} times</p>
+      <button onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </div>
+  );
+}
+
+export default Counter;</code></pre>
+    </div>
+
+    <p>Neste exemplo:</p>
+    <ul>
+        <li><code>useState(0)</code> inicializa o state com o valor 0.</li>
+        <li><code>count</code> é a variável que armazena o estado atual.</li>
+        <li><code>setCount</code> é a função que atualiza o estado.</li>
+        <li>Quando o botão é clicado, <code>setCount</code> é chamado para incrementar o valor de <code>count</code>.
+        </li>
+    </ul>
+
+    <h3>Atualizando o State</h3>
+    <p>A função <code>setCount</code> (ou a função fornecida pelo <code>useState</code>) é usada para atualizar o
+        estado. A atualização do estado causa uma nova renderização do componente com o estado atualizado.</p>
+
+    <h3>Estado em Componentes de Classe</h3>
+    <p>Em componentes de classe, o estado é gerenciado de forma diferente, usando a propriedade <code>this.state</code>
+        e o método <code>this.setState</code>:</p>
+
+    <div class="code-container">
+        <pre><code>import React, { Component } from 'react';
+
+class Counter extends Component {
+  constructor(props) {
+    super(props);
+    // Inicializa o estado
+    this.state = { count: 0 };
+  }
+
+  increment = () => {
+    // Atualiza o estado
+    this.setState({ count: this.state.count + 1 });
+  };
+
+  render() {
+    return (
+      <div>
+        <p>You clicked {this.state.count} times</p>
+        <button onClick={this.increment}>
+          Click me
+        </button>
+      </div>
+    );
+  }
+}
+
+export default Counter;</code></pre>
+    </div>
+
+    <h2>O que são Hooks?</h2>
+    <p>Hooks são funções que permitem que você use o state e outras características do React em componentes funcionais.
+        O Hook <code>useState</code> é apenas um dos muitos hooks disponíveis no React.</p>
+
+    <h3>Principais Hooks</h3>
+    <h4>useState</h4>
+    <p>O Hook <code>useState</code> é usado para adicionar o estado local a um componente funcional.</p>
+
+    <div class="code-container">
+        <pre><code>import React, { useState } from 'react';
+
+function Example() {
+  const [value, setValue] = useState('Hello');
+
+  return (
+    <div>
+      <p>{value}</p>
+      <button onClick={() => setValue('World')}>
+        Change Text
+      </button>
+    </div>
+  );
+}</code></pre>
+    </div>
+
+    <h4>useEffect</h4>
+    <p>O Hook <code>useEffect</code> é usado para lidar com efeitos colaterais, como chamadas de API ou manipulações de
+        DOM, que não são diretamente relacionados ao renderização do componente.</p>
+
+    <div class="code-container">
+        <pre><code>import React, { useEffect, useState } from 'react';
+
+function Example() {
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetch('https://api.example.com/data')
+      .then(response => response.json())
+      .then(data => setData(data));
+  }, []); // O array vazio significa que este efeito só será executado na montagem
+
+  return (
+    <div>
+      {data ? <p>{data.message}</p> : <p>Loading...</p>}
+    </div>
+  );
+}</code></pre>
+    </div>
+
+    <h4>useContext</h4>
+    <p>O Hook <code>useContext</code> permite que você consuma um contexto diretamente sem precisar de um componente de
+        contexto intermediário.</p>
+
+    <div class="code-container">
+        <pre><code>import React, { useContext } from 'react';
+
+const ThemeContext = React.createContext('light');
+
+function ThemedButton() {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <button style={{ background: theme === 'dark' ? '#333' : '#FFF' }}>
+      I am styled by theme context!
+    </button>
+  );
+}</code></pre>
+    </div>
+
+    <h4>useReducer</h4>
+    <p>O Hook <code>useReducer</code> é usado para gerenciar o estado complexo e é uma alternativa ao
+        <code>useState</code>.</p>
+
+    <div class="code-container">
+        <pre><code>import React, { useReducer } from 'react';
+
+const initialState = { count: 0 };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case 'increment':
+      return { count: state.count + 1 };
+    case 'decrement':
+      return { count: state.count - 1 };
+    default:
+      throw new Error();
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <p>{state.count}</p>
+      <button onClick={() => dispatch({ type: 'increment' })}>
+        Increment
+      </button>
+      <button onClick={() => dispatch({ type: 'decrement' })}>
+        Decrement
+      </button>
+    </div>
+  );
+}
+
+export default Counter;</code></pre>
+    </div>
+
+    <h2>Resumo</h2>
+    <ul>
+        <li><strong>State</strong> é usado para gerenciar dados mutáveis dentro de um componente. Em componentes
+            funcionais, você usa <code>useState</code> para adicionar e gerenciar o estado.</li>
+        <li><strong>Hooks</strong> são funções que permitem que você use state e outras funcionalidades do React em
+            componentes funcionais. Os principais hooks incluem <code>useState</code>, <code>useEffect</code>,
+            <code>useContext</code>, e <code>useReducer</code>.</li>
+        <li>Esses conceitos ajudam a construir interfaces dinâmicas e responsivas no React, permitindo que você crie
+            componentes interativos e reutilizáveis.</li>
+    </ul>
+</body>
+
+</html>

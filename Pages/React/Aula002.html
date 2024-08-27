@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conceitos Básicos do React</title>
+<link rel="stylesheet" href="../Styles/global.css">
+
+<body>
+
+    <header>
+        <h1>Portfolio do Bootcamp Front-end</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="fundamentos.html">Fundamentos</a>
+        <a href="webapi.html">Web API</a>
+        <a href="react.html">React</a>
+    </nav>
+
+    <main>
+        <h1>Conceitos Básicos do React</h1>
+
+        <p>Para construir aplicações com React, é fundamental estar familiarizado com três conceitos principais:</p>
+
+        <h2>Componentes:</h2>
+        <p><strong>O que são?</strong> Componentes são blocos reutilizáveis e independentes que representam uma parte da
+            interface do usuário. Cada componente pode ter seu próprio estado e lógica, e pode ser composto por outros
+            componentes.</p>
+        <p><strong>Por que são importantes?</strong> Eles ajudam a dividir a aplicação em partes menores e mais
+            gerenciáveis, promovendo a reutilização e a modularidade do código.</p>
+
+        <h2>Estado (State):</h2>
+        <p><strong>O que é?</strong> O estado é um objeto que armazena dados que podem mudar ao longo do tempo e afetam
+            a
+            renderização do componente. Cada componente pode ter seu próprio estado, que pode ser atualizado com base em
+            interações do usuário ou outros eventos.</p>
+        <p><strong>Por que é importante?</strong> O gerenciamento do estado permite que você crie interfaces dinâmicas e
+            responsivas, onde a UI se atualiza automaticamente quando os dados do estado mudam.</p>
+
+        <h2>Propriedades (Props):</h2>
+        <p><strong>O que são?</strong> Props são parâmetros passados para um componente de fora, geralmente por seu
+            componente pai. Eles permitem que os componentes recebam dados e funções para personalizar seu comportamento
+            e
+            aparência.</p>
+        <p><strong>Por que são importantes?</strong> As props permitem que você configure e controle a forma como os
+            componentes se comportam e são exibidos, facilitando a comunicação entre componentes e a construção de
+            interfaces complexas a partir de componentes simples.</p>
+
+        <h2>Exemplos para ilustrar:</h2>
+
+        <h3>Componentes:</h3>
+        <div class="codigo">
+            <pre><code>// Componente de botão simples
+        function Botao(props) {
+          return &lt;button&gt;{props.texto}&lt;/button&gt;;
+        }
+        
+        // Componente pai que usa o Botao
+        function App() {
+          return (
+        &lt;div&gt;
+          &lt;Botao texto="Clique aqui" /&gt;
+        &lt;/div&gt;
+          );
+        }
+        </code></pre>
+        </div>
+
+        <h3>Estado (State):</h3>
+        <div class="codigo">
+            <pre><code>import React, { useState } from 'react';
+        
+        function Contador() {
+          const [contador, setContador] = useState(0);
+          
+          return (
+        &lt;div&gt;
+          &lt;p&gt;Contador: {contador}&lt;/p&gt;
+          &lt;button onClick={() =&gt; setContador(contador + 1)}&gt;Incrementar&lt;/button&gt;
+        &lt;/div&gt;
+          );
+        }
+        </code></pre>
+        </div>
+
+        <h3>Propriedades (Props):</h3>
+        <div class="codigo">
+            <pre><code>function Saudacao(props) {
+          return &lt;h1&gt;Olá, {props.nome}!&lt;/h1&gt;;
+        }
+        
+        function App() {
+          return (
+        &lt;div&gt;
+          &lt;Saudacao nome="João" /&gt;
+          &lt;Saudacao nome="Maria" /&gt;
+        &lt;/div&gt;
+          );
+        }
+        </code></pre>
+        </div>
+
+        <p>Estar confortável com componentes, estado e props é essencial para criar e gerenciar aplicações React de
+            forma
+            eficaz. Eles são a base para construir interfaces de usuário reativas e bem estruturadas.</p>
+    </main>
+</body>
+
+</html>

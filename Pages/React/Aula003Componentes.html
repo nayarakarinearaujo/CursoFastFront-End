@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O que é Criar UI com Componentes?</title>
+    <link rel="stylesheet" href="../Styles/global.css">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Portfolio do Bootcamp Front-end</h1>
+    </header>
+
+    <nav>
+        <a href="../index.html">Início</a>
+        <a href="fundamentos.html">Fundamentos</a>
+        <a href="webapi.html">Web API</a>
+        <a href="react.html">React</a>
+    </nav>
+
+    <main>
+        <h1>O que é Criar UI com Componentes?</h1>
+        <p>UI (User Interface) refere-se à parte visual de um aplicativo com a qual os usuários interagem. Em React,
+            criar
+            uma UI com componentes significa construir a interface do usuário dividindo-a em partes menores e
+            reutilizáveis,
+            chamadas de componentes.</p>
+
+        <h2>Componentes em React</h2>
+        <p>Componentes são blocos de construção fundamentais em React. Eles permitem que você construa interfaces de
+            usuário
+            de forma modular e reutilizável. Existem dois tipos principais de componentes em React:</p>
+
+        <h3>Componentes Funcionais:</h3>
+        <p>São funções JavaScript que retornam JSX (uma sintaxe semelhante a HTML). Eles são usados para criar a
+            estrutura
+            da interface do usuário e podem usar Hooks para gerenciar estado e efeitos colaterais.</p>
+        <div class="codigo">
+            <pre><code>
+        import React from 'react';
+        
+        function MeuComponente() {
+          return (
+        &lt;div&gt;
+          &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+          &lt;p&gt;Este é um componente funcional.&lt;/p&gt;
+        &lt;/div&gt;
+          );
+        }
+        
+        export default MeuComponente;
+        </code></pre>
+        </div>
+
+        <h3>Componentes de Classe:</h3>
+        <p>São classes JavaScript que estendem React.Component. Eles têm métodos de ciclo de vida e podem gerenciar o
+            estado
+            de forma interna.</p>
+        <div class="codigo">
+            <pre><code>
+        import React, { Component } from 'react';
+        
+        class MeuComponente extends Component {
+          render() {
+        return (
+          &lt;div&gt;
+            &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+            &lt;p&gt;Este é um componente de classe.&lt;/p&gt;
+          &lt;/div&gt;
+        );
+          }
+        }
+        
+        export default MeuComponente;
+        </code></pre>
+        </div>
+
+        <h2>Como Componentes Funcionam</h2>
+        <ul>
+            <li><strong>Reutilização:</strong> Você pode criar um componente uma vez e usá-lo em várias partes do seu
+                aplicativo. Isso promove a reutilização de código e a consistência visual.</li>
+            <li><strong>Composição:</strong> Componentes podem ser compostos dentro de outros componentes. Isso
+                significa
+                que você pode construir a UI combinando vários componentes menores para formar um componente maior.</li>
+            <li><strong>Gerenciamento de Estado:</strong> Componentes podem ter seu próprio estado (usando
+                <code>useState</code> em componentes funcionais ou <code>this.state</code> em componentes de classe).
+                Isso
+                permite que eles atualizem a UI com base em dados que mudam ao longo do tempo.
+            </li>
+            <li><strong>Props:</strong> Props são propriedades que você passa para um componente de fora, permitindo que
+                você configure e personalize o comportamento e a aparência dos componentes.</li>
+        </ul>
+
+        <h2>Exemplo de Criação de UI com Componentes</h2>
+        <p>Vamos criar uma simples interface de lista de tarefas:</p>
+
+        <h3>Componente de Item da Lista:</h3>
+        <div class="codigo">
+            <pre><code>
+        // src/components/ItemLista.js
+        import React from 'react';
+        
+        function ItemLista(props) {
+          return &lt;li&gt;{props.item}&lt;/li&gt;;
+        }
+        
+        export default ItemLista;
+        </code></pre>
+        </div>
+
+        <h3>Componente de Lista de Tarefas:</h3>
+        <div class="codigo">
+            <pre><code>
+        // src/components/ListaDeTarefas.js
+        import React from 'react';
+        import ItemLista from './ItemLista';
+        
+        function ListaDeTarefas() {
+          const tarefas = ['Estudar React', 'Criar um projeto', 'Ler um livro'];
+        
+          return (
+        &lt;ul&gt;
+          {tarefas.map((tarefa, index) =&gt; (
+            &lt;ItemLista key={index} item={tarefa} /&gt;
+          ))}
+        &lt;/ul&gt;
+          );
+        }
+        
+        export default ListaDeTarefas;
+        </code></pre>
+        </div>
+
+        <h3>Componente Principal:</h3>
+        <div class="codigo">
+            <pre><code>
+        // src/App.js
+        import React from 'react';
+        import ListaDeTarefas from './components/ListaDeTarefas';
+        
+        function App() {
+          return (
+        &lt;div&gt;
+          &lt;h1&gt;Minha Lista de Tarefas&lt;/h1&gt;
+          &lt;ListaDeTarefas /&gt;
+        &lt;/div&gt;
+          );
+        }
+        
+        export default App;
+        </code></pre>
+        </div>
+
+        <h2>Benefícios de Usar Componentes</h2>
+        <ul>
+            <li><strong>Modularidade:</strong> Divida a UI em partes menores e mais gerenciáveis.</li>
+            <li><strong>Reutilização:</strong> Crie componentes reutilizáveis para evitar duplicação de código.</li>
+            <li><strong>Manutenção:</strong> Facilita a manutenção e atualização da interface do usuário.</li>
+        </ul>
+
+        <p>Em resumo, criar uma UI com componentes em React envolve a construção de partes independentes e reutilizáveis
+            da
+            interface, que podem ser combinadas para criar uma aplicação completa e interativa.</p>
+    </main>
+</body>
+
+</html>
